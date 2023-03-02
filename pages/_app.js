@@ -6,11 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
-        <title>el&apos;s films</title>
-        <meta
-          name="Description"
-          content="A Next.js starter styled using Tailwind CSS."
-        />
+        <title>prompts for cognitive biases</title>
+        <meta name="Description" content="prompts for cognitive biases" />
       </Head>
 
       <Component {...pageProps} />
