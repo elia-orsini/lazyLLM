@@ -4,6 +4,7 @@ import downloadJSON from "@components/utils/downloadJSON";
 import extractData from "@components/utils/extractData";
 import { Client } from "@notionhq/client";
 import { GetStaticPaths } from "next";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import IPrompt from "types";
 
@@ -20,9 +21,9 @@ export default function Post({ items }) {
   return (
     <>
       <div>
-        <a href="/">
-          <button className="border border-black px-2 ml-5">back</button>
-        </a>
+        <Link href="/" passHref>
+          <button className="border border-black px-2 ml-5 mt-10">back</button>
+        </Link>
       </div>
 
       <Title />
@@ -46,14 +47,21 @@ export default function Post({ items }) {
           <div className="grid grid-cols-3">
             <div className="text-left col-span-2">
               {filteredItems[0].metricType.split(/;/).map((metric: string) => {
-                console.log(metric);
-                return <p className="font-semibold px-2 border-b">{metric}</p>;
+                return (
+                  <p key={metric} className="font-semibold px-2 border-b">
+                    {metric}
+                  </p>
+                );
               })}
             </div>
 
             <div className="text-right">
               {filteredItems[0].metricType.split(/;/).map((metric: string) => {
-                return <p className="font-semibold px-2 border-b">0.2</p>;
+                return (
+                  <p key={metric} className="font-semibold px-2 border-b">
+                    0.2
+                  </p>
+                );
               })}
             </div>
           </div>
@@ -61,8 +69,8 @@ export default function Post({ items }) {
       </div>
 
       <div className="mx-auto my-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 mb-14">
-        {filteredItems.map((item) => {
-          return <ItemDetailed content={item} />;
+        {filteredItems.map((item: IPrompt) => {
+          return <ItemDetailed key={item.id} content={item} />;
         })}
       </div>
     </>

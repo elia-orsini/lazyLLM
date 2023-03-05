@@ -5,6 +5,7 @@ import extractData from "@components/utils/extractData";
 import downloadJSON from "@components/utils/downloadJSON";
 import Title from "@components/Title";
 import IPrompt from "types";
+import Link from "next/link";
 
 const IndexPage = ({ items, cognitiveBiases }) => {
   const [biasSelected, setBias] = useState("");
@@ -22,17 +23,21 @@ const IndexPage = ({ items, cognitiveBiases }) => {
     filteredArr = filteredArr.filter((item: IPrompt) => {
       return item.cognitiveBias === biasSelected;
     });
-  }  
+  }
 
   return (
     <>
       <Title />
 
       <div className="mx-auto py-2 mt-2 flex">
-        <select className="border border-black" onChange={(v) => setBias(v.target.value)}>
+        <select className="border border-black hover:bg-gray-200" onChange={(v) => setBias(v.target.value)}>
           <option value="">all biases</option>
           {cognitiveBiases.map((bias) => {
-            return <option value={bias}>{bias}</option>;
+            return (
+              <option key={bias} value={bias}>
+                {bias}
+              </option>
+            );
           })}
         </select>
 
@@ -40,15 +45,19 @@ const IndexPage = ({ items, cognitiveBiases }) => {
           onClick={() => {
             downloadJSON(filteredArr, "prompts.json");
           }}
-          className="border border-black px-2"
+          className="border border-black px-2 hover:bg-gray-200"
         >
-          download
+          JSON
         </button>
+
+        <Link href="/chatgptBattle" passHref>
+          <button className="border border-black px-2 hover:bg-gray-200">chatGPT</button>
+        </Link>
       </div>
 
       <div className="mx-auto my-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 mb-14">
-        {filteredArr.map((item) => {
-          return <Item content={item} fullData={items} />;
+        {filteredArr.map((item: IPrompt) => {
+          return <Item key={item.id} content={item} fullData={items} />;
         })}
       </div>
     </>
