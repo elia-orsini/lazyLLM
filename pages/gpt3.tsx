@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { withPasswordProtect } from "next-password-protect";
 
-const Gpt3Request = ({ secret }) => {
+const GPT3 = ({ secret }) => {
   const [prompt, setPrompt] = useState<string>("");
   const [response, setResponse] = useState<string>("");
 
@@ -78,9 +79,9 @@ const Gpt3Request = ({ secret }) => {
 export const getStaticProps = async () => {
   return {
     props: {
-      secret: "",
+      secret: process.env.OPEN_AI_SECRET,
     },
   };
 };
 
-export default Gpt3Request;
+export default withPasswordProtect(GPT3, {});

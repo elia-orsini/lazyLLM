@@ -1,6 +1,7 @@
 import "../css/index.css";
 import Head from "next/head";
 import Layout from "@components/layout";
+import { withPasswordProtect } from "next-password-protect";
 
 function MyApp({ Component, pageProps }) {
   return (

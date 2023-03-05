@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import downloadJSON from "@utils/downloadJSON";
 import { IMessage, PromptObject } from "types";
-import { withSessionSsr } from "@utils/session";
+import { withPasswordProtect } from "next-password-protect";
 
 const Gpt3Request = ({ secret }) => {
   const [prompt, setPrompt] = useState<string>("");
@@ -256,22 +256,12 @@ const Gpt3Request = ({ secret }) => {
   );
 };
 
-export const getServerSideProps = withSessionSsr(async function ({ req, res }) {
-  const user = req.session.user;
-
-  if (user === undefined) {
-    res.setHeader("location", "/login");
-    res.statusCode = 302;
-    res.end();
-    return { props: {} };
-  }
-
-  // You can return data here from a database knowing only authenticated users (you) will see it.
+export const getStaticProps = async () => {
   return {
     props: {
       secret: process.env.OPEN_AI_SECRET,
     },
   };
-});
+};
 
-export default Gpt3Request;
+export default withPasswordProtect(Gpt3Request, {});
