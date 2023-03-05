@@ -78,7 +78,7 @@ const Gpt3Request = ({ secret }) => {
 export const getStaticProps = async () => {
   return {
     props: {
-      secret: process.env.OPEN_AI_SECRET,
+      secret: "",
     },
   };
 };
