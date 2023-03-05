@@ -10,11 +10,13 @@ const Gpt3Request = ({ secret }) => {
 
   const [numberOfTimes, setNumberOfTimes] = useState<number>(1);
 
-  const [maxTokens, setMaxTokens] = useState<number>(7);
-  const [temperature, setTemperature] = useState<number>(0.5);
+  const [maxTokens, setMaxTokens] = useState<number>(50);
+  const [temperature, setTemperature] = useState<number>(1);
+  const [topP, setTopP] = useState<number>(0.1);
 
   const [prompts, setPrompts] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [experimentID, setExperimentID] = useState<number>();
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -23,6 +25,8 @@ const Gpt3Request = ({ secret }) => {
     reader.onload = (event) => {
       const jsonData = JSON.parse(event.target?.result as string) as PromptObject[];
       const promptsArray = jsonData.map((obj) => obj.prompt);
+      setExperimentID(jsonData[0].id);
+      promptsArray.reverse();
       setPrompts(["", ...promptsArray]);
     };
 
@@ -40,7 +44,7 @@ const Gpt3Request = ({ secret }) => {
       const response = await axios.post(
         API_URL,
         {
-          model: "gpt-3.5-turbo",
+          model: "gpt-3.5-turbo-0301",
           messages: [
             {
               role: "user",
@@ -50,6 +54,7 @@ const Gpt3Request = ({ secret }) => {
           max_tokens: maxTokens,
           n: numberOfTimes,
           temperature: temperature,
+          top_p: 1,
         },
         {
           headers: {
@@ -89,10 +94,11 @@ const Gpt3Request = ({ secret }) => {
       prompt: prompt,
       maxTokens: maxTokens,
       temperature: temperature,
+      topP: topP,
       responses: responses,
     };
 
-    downloadJSON(jsonFile, `${prompt.slice(0, 10)} - ${numberOfTimes}`);
+    downloadJSON(jsonFile, `${experimentID}-${currentIndex}`);
   };
 
   return (
@@ -215,10 +221,22 @@ const Gpt3Request = ({ secret }) => {
                 <input
                   type="number"
                   step="0.1"
-                  max="1"
+                  max="2"
                   min="0"
                   value={temperature}
                   onChange={(event) => setTemperature(parseFloat(event.target.value))}
+                  className="block w-16 mr-2 py-1 px-2.5 text-gray-900 bg-white rounded-lg border border-black"
+                  placeholder="7"
+                />
+
+                <label className="mr-2 my-auto uppercase">top P: </label>
+                <input
+                  type="number"
+                  step="0.1"
+                  max="1"
+                  min="0"
+                  value={topP}
+                  onChange={(event) => setTopP(parseFloat(event.target.value))}
                   className="block w-16 mr-2 py-1 px-2.5 text-gray-900 bg-white rounded-lg border border-black"
                   placeholder="7"
                 />
@@ -252,6 +270,10 @@ const Gpt3Request = ({ secret }) => {
           })}
         </div>
       )}
+
+      <div className="mt-40">
+        <h3 className="font-semibold text-lg text-center text-white">.</h3>
+      </div>
     </div>
   );
 };
