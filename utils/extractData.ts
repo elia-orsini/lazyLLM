@@ -1,6 +1,6 @@
-import IPrompt from "types";
+import { IPrompt } from "types";
 
-export default function extractData(item):IPrompt {
+export default function extractData(item): IPrompt {
   const data = item.properties;
 
   return {
@@ -13,5 +13,6 @@ export default function extractData(item):IPrompt {
     variants: data.VARIANTS?.number || 0,
     metricType: data.METRIC_TYPE.rich_text[0]?.plain_text || "",
     participants: data.PARTICIPANTS.rich_text[0]?.plain_text || "",
+    resultFormatLength: data.RESULT_FORMAT_LENGTH?.number || 0,
   };
 }

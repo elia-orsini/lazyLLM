@@ -1,4 +1,4 @@
-export default interface IPrompt {
+export interface IPrompt {
   id: number;
   paperId: number;
   cognitiveBias: string;
@@ -8,6 +8,7 @@ export default interface IPrompt {
   variants: number;
   metricType: string;
   participants: string;
+  resultFormatLength: number;
 }
 
 export interface ChatMessage {
@@ -21,15 +22,3 @@ export interface IMessage {
   index: number;
   finishReason: string;
 }
-
-export type PromptObject = {
-  id: number;
-  paperId: number;
-  cognitiveBias: string;
-  prompt: string;
-  changes: string;
-  original: string;
-  variants: number;
-  metricType: string;
-  participants: string;
-};

@@ -6,7 +6,7 @@ import { Client } from "@notionhq/client";
 import { GetStaticPaths } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import IPrompt from "types";
+import { IPrompt } from "types";
 
 export default function Post({ items }) {
   const router = useRouter();

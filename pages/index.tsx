@@ -4,7 +4,7 @@ import Item from "@components/Item";
 import extractData from "@utils/extractData";
 import downloadJSON from "@utils/downloadJSON";
 import Title from "@components/Title";
-import IPrompt from "types";
+import { IPrompt } from "types";
 import Link from "next/link";
 
 const IndexPage = ({ items, cognitiveBiases }) => {

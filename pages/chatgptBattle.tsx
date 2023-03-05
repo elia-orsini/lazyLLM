@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import downloadJSON from "@utils/downloadJSON";
-import { IMessage, PromptObject } from "types";
+import { IPrompt, IMessage } from "types";
 import { withPasswordProtect } from "next-password-protect";
 
 const Gpt3Request = ({ secret }) => {
@@ -16,16 +16,18 @@ const Gpt3Request = ({ secret }) => {
 
   const [prompts, setPrompts] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [experimentID, setExperimentID] = useState<number>();
+  const [experimentMetadata, setExperimentMetadata] = useState<IPrompt[]>();
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     const reader = new FileReader();
 
     reader.onload = (event) => {
-      const jsonData = JSON.parse(event.target?.result as string) as PromptObject[];
+      const jsonData = JSON.parse(event.target?.result as string) as IPrompt[];
+
+      setExperimentMetadata(jsonData);
+
       const promptsArray = jsonData.map((obj) => obj.prompt);
-      setExperimentID(jsonData[0].id);
       promptsArray.reverse();
       setPrompts(["", ...promptsArray]);
     };
@@ -85,6 +87,8 @@ const Gpt3Request = ({ secret }) => {
     event.preventDefault();
 
     const newValue = event.target[0].value;
+    event.target[0].value = "";
+    event.target[1].className += "focus:bg-black focus:text-white bg-black text-white";
 
     responses[item.index].edited = newValue;
   };
@@ -92,13 +96,16 @@ const Gpt3Request = ({ secret }) => {
   const triggerDownloadJSON = () => {
     const jsonFile = {
       prompt: prompt,
+      resultFormatLength: experimentMetadata[currentIndex - 1].resultFormatLength,
       maxTokens: maxTokens,
       temperature: temperature,
       topP: topP,
       responses: responses,
     };
 
-    downloadJSON(jsonFile, `${experimentID}-${currentIndex}`);
+    console.log(jsonFile);
+
+    downloadJSON(jsonFile, `${experimentMetadata[currentIndex - 1].id}-${currentIndex}`);
   };
 
   return (
