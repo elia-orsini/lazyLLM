@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { ChatMessage } from "types";
+import { withSessionSsr } from "@utils/session";
 
 const Gpt3Request = ({ secret }) => {
   const [prompt, setPrompt] = useState<string>("");
@@ -85,7 +86,7 @@ const Gpt3Request = ({ secret }) => {
 export const getStaticProps = async () => {
   return {
     props: {
-      secret: process.env.OPEN_AI_SECRET,
+      secret: "",
     },
   };
 };

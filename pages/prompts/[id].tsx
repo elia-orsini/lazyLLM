@@ -1,7 +1,7 @@
 import ItemDetailed from "@components/ItemDetailed";
 import Title from "@components/Title";
-import downloadJSON from "@components/utils/downloadJSON";
-import extractData from "@components/utils/extractData";
+import downloadJSON from "@utils/downloadJSON";
+import extractData from "@utils/extractData";
 import { Client } from "@notionhq/client";
 import { GetStaticPaths } from "next";
 import Link from "next/link";
