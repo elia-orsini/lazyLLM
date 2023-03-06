@@ -18,6 +18,8 @@ const Gpt3Request = ({ secret }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [experimentMetadata, setExperimentMetadata] = useState<IPrompt[]>();
 
+  const [time, setTime] = useState<Date>();
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     const reader = new FileReader();
@@ -66,6 +68,9 @@ const Gpt3Request = ({ secret }) => {
         }
       );
 
+      const date = new Date(response.data.created * 1000);
+      setTime(date);
+
       response.data.choices.map((choice) =>
         responses.push({
           text: choice.message.content,
@@ -86,9 +91,22 @@ const Gpt3Request = ({ secret }) => {
   const customEdit = (event: React.FormEvent<HTMLFormElement>, item: IMessage): void => {
     event.preventDefault();
 
-    const newValue = event.target[0].value;
+    // @ts-ignore
+    const submitter = event.nativeEvent.submitter.name;
+
+    let newValue: string;
+
+    if (submitter === "edit") {
+      newValue = event.target[0].value;
+    } else {
+      newValue = "null";
+    }
+
     event.target[0].value = "";
-    event.target[1].className += "focus:bg-black focus:text-white bg-black text-white";
+    event.target[3].className = "ml-2 opacity-100";
+    setTimeout(() => {
+      event.target[3].className = "ml-2 opacity-0";
+    }, 2000);
 
     responses[item.index].edited = newValue;
   };
@@ -96,7 +114,7 @@ const Gpt3Request = ({ secret }) => {
   const triggerDownloadJSON = () => {
     const jsonFile = {
       prompt: prompt,
-      resultFormatLength: experimentMetadata[currentIndex - 1].resultFormatLength,
+      resultFormatLength: currentIndex > 0 ? experimentMetadata[currentIndex - 1].resultFormatLength : 1,
       maxTokens: maxTokens,
       temperature: temperature,
       topP: topP,
@@ -105,7 +123,7 @@ const Gpt3Request = ({ secret }) => {
 
     console.log(jsonFile);
 
-    downloadJSON(jsonFile, `${experimentMetadata[currentIndex - 1].id}-${currentIndex}`);
+    downloadJSON(jsonFile, `${currentIndex > 0 ? experimentMetadata[currentIndex - 1].id : 0}-${currentIndex}`);
   };
 
   return (
@@ -253,7 +271,10 @@ const Gpt3Request = ({ secret }) => {
         </div>
       </form>
 
-      <h3 className="font-semibold text-lg mt-10">RESULTS</h3>
+      <h3 className="font-semibold text-lg mt-10">
+        RESULTS
+        <span className="text-sm">{time ? ` (${time.getHours()}:${time.getMinutes()}:${time.getSeconds()})` : ""}</span>
+      </h3>
       {responses.length > 0 ? (
         <div className="border-t border-l border-r mt-1 border-black rounded">
           {responses.map((item) => (
@@ -263,8 +284,23 @@ const Gpt3Request = ({ secret }) => {
               <form className="mt-2 mr-40" onSubmit={(event) => customEdit(event, item)}>
                 <label className="mr-2 my-auto text-sm uppercase">edit answer:</label>
                 <input type="text" className="px-4 border border-black" />
-                <button type="submit" className="px-2 border-t border-r border-b border-black hover:bg-gray-200">
-                  Edit
+                <button type="submit" name="edit" className="px-2 border-t border-r border-b border-black hover:bg-gray-200">
+                  edit
+                </button>
+                <button type="submit" name="setNull" className="px-2 border-t border-r border-b border-black hover:bg-gray-200">
+                  set null
+                </button>
+                <button className="ml-2 opacity-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-pencil-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                  </svg>
                 </button>
               </form>
             </div>
