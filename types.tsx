@@ -10,6 +10,7 @@ export interface IPrompt {
   participants: string;
   resultFormatLength: number;
   tested: boolean;
+  discussion: string;
 }
 
 export interface ChatMessage {

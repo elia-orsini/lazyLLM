@@ -11,6 +11,9 @@ export default function Title({ includeLinks = true, title = "prompts for cognit
         {includeLinks && (
           <div className="text-right">
             <Link href="/chatgptBattle" passHref>
+              <button className="uppercase text-sm mt-2 my-auto font-semibold hover:bg-gray-200 px-1">chatGPTBattle</button>
+            </Link>
+            <Link href="/chatgpt" passHref>
               <button className="uppercase text-sm mt-2 my-auto font-semibold hover:bg-gray-200 px-1">chatGPT</button>
             </Link>
           </div>

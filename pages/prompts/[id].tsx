@@ -7,8 +7,12 @@ import { GetStaticPaths } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { IPrompt } from "types";
+import { useState } from "react";
+import Discussion from "@components/Discussion";
 
 export default function Post({ items }) {
+  const [showDiscussion, setShowDiscussion] = useState<boolean>(false);
+
   const router = useRouter();
   const id = parseInt(router.query.id as string);
 
@@ -21,12 +25,6 @@ export default function Post({ items }) {
 
   return (
     <div className="mx-auto">
-      {/* <div>
-        <Link href="/" passHref>
-          <button className="border border-black px-2 ml-5 mt-10">back</button>
-        </Link>
-      </div> */}
-
       <Title />
 
       <div className="mt-4 w-full text-center my-4 grid sm:grid-cols-2">
@@ -39,7 +37,20 @@ export default function Post({ items }) {
           >
             download as json
           </button>
+
+          {filteredItems[0].discussion !== "" && (
+            <button
+              onClick={() => {
+                setShowDiscussion(true);
+              }}
+              className="hover:bg-gray-300 bg-gray-200 px-1 font-mono text-sm ml-4"
+            >
+              show discussion
+            </button>
+          )}
         </div>
+
+        {showDiscussion && <Discussion text={filteredItems[0].discussion} showDiscussion={setShowDiscussion} />}
 
         <div className="text-right text-sm my-auto">
           {filteredItems[0].cognitiveBias} - {filteredItems[0].participants} participants -

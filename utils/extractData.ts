@@ -15,5 +15,6 @@ export default function extractData(item): IPrompt {
     participants: data.PARTICIPANTS.rich_text[0]?.plain_text || "",
     resultFormatLength: data.RESULT_FORMAT_LENGTH?.number || 0,
     tested: data.TESTED.checkbox || false,
+    discussion: data.DISCUSSION.rich_text[0]?.plain_text || "",
   };
 }
