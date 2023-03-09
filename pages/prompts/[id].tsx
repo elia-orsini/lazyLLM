@@ -17,63 +17,43 @@ export default function Post({ items }) {
   });
 
   const allElementsPresent = filteredItems[0].variants === filteredItems.length;
+  const allVariantsTested = filteredItems.every((item: IPrompt) => item.tested);
 
   return (
-    <>
-      <div>
+    <div className="mx-auto">
+      {/* <div>
         <Link href="/" passHref>
           <button className="border border-black px-2 ml-5 mt-10">back</button>
         </Link>
-      </div>
+      </div> */}
 
       <Title />
 
-      <div className="bg-gray-200 mt-4">
-        <div className="mx-auto w-max text-center border border-black bg-white my-4 grid sm:grid-cols-2">
-          <div className="sm:border-r border-black">
-            <p className="font-semibold px-4">{filteredItems[0].cognitiveBias}</p>
-            <p className="">{filteredItems[0].participants} participants</p>
-            {allElementsPresent ? <p className="bg-green-600">all variants present</p> : <p className="bg-red-600">missing variants</p>}
-            <button
-              onClick={() => {
-                downloadJSON(filteredItems, "prompts.json");
-              }}
-              className="border-t border-black w-full bg-black text-white"
-            >
-              download
-            </button>
-          </div>
+      <div className="mt-4 w-full text-center my-4 grid sm:grid-cols-2">
+        <div className="text-left">
+          <button
+            onClick={() => {
+              downloadJSON(filteredItems, `${filteredItems[0].id}.json`);
+            }}
+            className="hover:bg-gray-300 bg-gray-200 px-1 font-mono text-sm"
+          >
+            download as json
+          </button>
+        </div>
 
-          <div className="grid grid-cols-3">
-            <div className="text-left col-span-2">
-              {filteredItems[0].metricType.split(/;/).map((metric: string) => {
-                return (
-                  <p key={metric} className="font-semibold px-2 border-b">
-                    {metric}
-                  </p>
-                );
-              })}
-            </div>
-
-            <div className="text-right">
-              {filteredItems[0].metricType.split(/;/).map((metric: string) => {
-                return (
-                  <p key={metric} className="font-semibold px-2 border-b">
-                    0.2
-                  </p>
-                );
-              })}
-            </div>
-          </div>
+        <div className="text-right text-sm my-auto">
+          {filteredItems[0].cognitiveBias} - {filteredItems[0].participants} participants -
+          <span className="border-black px-2">{allElementsPresent ? "all variants present" : "missing variants"}</span>-{" "}
+          <span className={`border-black`}>{allVariantsTested ? "tested" : "not tested yet"} </span>
         </div>
       </div>
 
-      <div className="mx-auto my-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 mb-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-14">
         {filteredItems.map((item: IPrompt) => {
           return <ItemDetailed key={item.id} content={item} />;
         })}
       </div>
-    </>
+    </div>
   );
 }
 

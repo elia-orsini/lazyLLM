@@ -1,9 +1,20 @@
-export default function Title() {
+import Link from "next/link";
+
+export default function Title({ includeLinks = true, title = "prompts for cognitive biases" }) {
   return (
-    <div className="w-full flex mt-4 text-center">
-      <div className="mx-auto">
-        <h1 className="font-semibold text-xl lowercase tracking-wide">prompts</h1>
-        <h3 className="text-xs uppercase font-light tracking-tighter">for cognitive biases</h3>
+    <div className="w-full flex mt-4 text-center border-b border-black pb-3">
+      <div className="w-full grid grid-cols-2">
+        <div className="text-left">
+          <h1 className="inline font-semibold text-xl lowercase tracking-wide">{title}</h1>
+        </div>
+
+        {includeLinks && (
+          <div className="text-right">
+            <Link href="/chatgptBattle" passHref>
+              <button className="uppercase text-sm mt-2 my-auto font-semibold hover:bg-gray-200 px-1">chatGPT</button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

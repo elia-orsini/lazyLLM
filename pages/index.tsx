@@ -9,6 +9,7 @@ import Link from "next/link";
 
 const IndexPage = ({ items, cognitiveBiases }) => {
   const [biasSelected, setBias] = useState("");
+  const [showOnlyTested, setShowOnlyTested] = useState(false);
 
   let filteredArr = Object.values(
     items.reduce((acc, curr) => {
@@ -25,40 +26,48 @@ const IndexPage = ({ items, cognitiveBiases }) => {
     });
   }
 
+  if (showOnlyTested) {
+    filteredArr = filteredArr.filter((item: IPrompt) => {
+      return item.tested === true;
+    });
+  }
+
   return (
     <>
-      <Title />
+      <div className="mx-auto">
+        <Title />
 
-      <div className="mx-auto py-2 mt-2 flex">
-        <select className="border border-black hover:bg-gray-200" onChange={(v) => setBias(v.target.value)}>
-          <option value="">all biases</option>
-          {cognitiveBiases.map((bias) => {
-            return (
-              <option key={bias} value={bias}>
-                {bias}
-              </option>
-            );
+        <div className="mx-auto py-2 mt-2 grid grid-cols-2">
+          <div>
+            <select className="border px-1 h-full border-black hover:bg-gray-200" onChange={(v) => setBias(v.target.value)}>
+              <option value="">all biases</option>
+              {cognitiveBiases.map((bias: string) => {
+                return (
+                  <option key={bias} value={bias}>
+                    {bias}
+                  </option>
+                );
+              })}
+            </select>
+
+            <button
+              className={`border px-2 mx-1 border-black ${showOnlyTested ? "bg-black text-white" : "bg-white text-black"}`}
+              onClick={() => setShowOnlyTested(!showOnlyTested)}
+            >
+              show only tested
+            </button>
+          </div>
+
+          <div className="inline text-right text-xs my-auto">
+            <span>{filteredArr.length} experiments</span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mb-14">
+          {filteredArr.map((item: IPrompt) => {
+            return <Item key={item.id} content={item} fullData={items} />;
           })}
-        </select>
-
-        <button
-          onClick={() => {
-            downloadJSON(filteredArr, "prompts.json");
-          }}
-          className="border border-black px-2 hover:bg-gray-200"
-        >
-          JSON
-        </button>
-
-        <Link href="/chatgptBattle" passHref>
-          <button className="border border-black px-2 hover:bg-gray-200">chatGPT</button>
-        </Link>
-      </div>
-
-      <div className="mx-auto my-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 mb-14">
-        {filteredArr.map((item: IPrompt) => {
-          return <Item key={item.id} content={item} fullData={items} />;
-        })}
+        </div>
       </div>
     </>
   );

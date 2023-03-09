@@ -27,7 +27,7 @@ const ChatGPT = ({ secret }) => {
           {
             model: "gpt-3.5-turbo",
             messages: newResponse,
-            max_tokens: 200,
+            max_tokens: 500,
             n: 1,
             temperature: 0.5,
           },

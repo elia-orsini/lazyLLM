@@ -3,6 +3,8 @@ import axios from "axios";
 import downloadJSON from "@utils/downloadJSON";
 import { IPrompt, IMessage } from "types";
 import { withPasswordProtect } from "next-password-protect";
+import { Oval } from "react-loading-icons";
+import Title from "@components/Title";
 
 const Gpt3Request = ({ secret }) => {
   const [prompt, setPrompt] = useState<string>("");
@@ -20,17 +22,21 @@ const Gpt3Request = ({ secret }) => {
 
   const [time, setTime] = useState<Date>();
 
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     const reader = new FileReader();
 
     reader.onload = (event) => {
       const jsonData = JSON.parse(event.target?.result as string) as IPrompt[];
+      jsonData.reverse();
 
       setExperimentMetadata(jsonData);
 
       const promptsArray = jsonData.map((obj) => obj.prompt);
-      promptsArray.reverse();
+
       setPrompts(["", ...promptsArray]);
     };
 
@@ -44,8 +50,9 @@ const Gpt3Request = ({ secret }) => {
 
     const responses = [];
 
-    try {
-      const response = await axios.post(
+    setLoading(true);
+    await axios
+      .post(
         API_URL,
         {
           model: "gpt-3.5-turbo-0301",
@@ -66,22 +73,26 @@ const Gpt3Request = ({ secret }) => {
             Authorization: `Bearer ${API_KEY}`,
           },
         }
-      );
+      )
+      .then((response) => {
+        setLoading(false);
+        setError("");
 
-      const date = new Date(response.data.created * 1000);
-      setTime(date);
+        const date = new Date(response.data.created * 1000);
+        setTime(date);
 
-      response.data.choices.map((choice) =>
-        responses.push({
-          text: choice.message.content,
-          edited: choice.message.content,
-          index: choice.index,
-          finishReason: choice.finish_reason,
-        })
-      );
-    } catch (error) {
-      console.error(error);
-    }
+        response.data.choices.map((choice) =>
+          responses.push({
+            text: choice.message.content,
+            edited: choice.message.content,
+            index: choice.index,
+            finishReason: choice.finish_reason,
+          })
+        );
+      })
+      .catch((response) => {
+        setError(response.response.data.error.message);
+      });
 
     setResponses(responses);
 
@@ -128,12 +139,12 @@ const Gpt3Request = ({ secret }) => {
 
   return (
     <div className="mx-auto h-screen w-full px-10">
-      <h3 className="font-bold text-xl text-center mt-10">CHATGPT BATTLE MODE</h3>
+      <Title includeLinks={false} title="chatGPT battle mode" />
 
       <form className="w-full bg-gray-200 rounded-xl" onSubmit={handleSubmit}>
         <div className="grid items-center px-3 rounded-xl py-3 mt-4 border border-black">
           <div className="flex">
-            <input type="file" accept=".json" onChange={handleFileUpload} />
+            <input id="files" type="file" accept=".json" onChange={handleFileUpload} />
 
             <button
               type="button"
@@ -192,15 +203,21 @@ const Gpt3Request = ({ secret }) => {
               id="chat"
               value={prompt}
               onChange={(event) => setPrompt(event.target.value)}
-              className="block mr-2 p-2.5 h-20 w-full text-sm text-gray-900 bg-white rounded-lg border border-black"
+              className="mr-2 p-2.5 h-20 w-full text-sm text-gray-900 bg-white rounded-lg border border-black"
               placeholder="Your prompt..."
             />
 
-            <button type="submit" className="inline-flex my-auto justify-center px-2 text-blue-600 rounded-lg cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" viewBox="0 0 16 16">
-                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-              </svg>
-            </button>
+            {loading ? (
+              <button className="inline-flex my-auto justify-center px-2 text-blue-600 rounded-lg cursor-pointer">
+                <Oval width="24" strokeWidth={4} stroke="currentColor" />
+              </button>
+            ) : (
+              <button type="submit" className="inline-flex my-auto justify-center px-2 text-blue-600 rounded-lg cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" viewBox="0 0 16 16">
+                  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+              </button>
+            )}
           </div>
 
           <div className="flex gap-5">
@@ -221,10 +238,11 @@ const Gpt3Request = ({ secret }) => {
                 <input
                   type="number"
                   min="1"
+                  max="100"
                   value={numberOfTimes}
                   onChange={(event) => setNumberOfTimes(parseInt(event.target.value))}
                   className="block w-16 mr-2 py-1 px-2.5 text-sm text-gray-900 bg-white rounded-lg border border-black"
-                  placeholder="0"
+                  placeholder="1"
                 />
               </div>
             </div>
@@ -271,7 +289,9 @@ const Gpt3Request = ({ secret }) => {
         </div>
       </form>
 
-      <h3 className="font-semibold text-lg mt-10">
+      {error && <h4 className="font-semibold text-red-500 w-full mt-2">{error}</h4>}
+
+      <h3 className="font-semibold text-lg mt-4">
         RESULTS
         <span className="text-sm">{time ? ` (${time.getHours()}:${time.getMinutes()}:${time.getSeconds()})` : ""}</span>
       </h3>
@@ -307,10 +327,8 @@ const Gpt3Request = ({ secret }) => {
           ))}
         </div>
       ) : (
-        <div className="border-t border-l border-r mt-1 border-black rounded scrollable max-h-11 overflow-scroll">
-          {[[], [], [], [], [], [], [], [], [], [], [], []].slice(0, numberOfTimes).map((i) => {
-            return <div key={Math.random()} className=" py-2 px-2 h-16 border-b border-black flex flex-col"></div>;
-          })}
+        <div className="w-full h-40 flex">
+          <p className="mx-auto my-auto"> no results </p>
         </div>
       )}
 

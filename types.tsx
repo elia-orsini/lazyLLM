@@ -9,6 +9,7 @@ export interface IPrompt {
   metricType: string;
   participants: string;
   resultFormatLength: number;
+  tested: boolean;
 }
 
 export interface ChatMessage {
