@@ -22,6 +22,7 @@ export default function Post({ items }) {
 
   const allElementsPresent = filteredItems[0].variants === filteredItems.length;
   const allVariantsTested = filteredItems.every((item: IPrompt) => item.tested);
+  const discussionPresent = filteredItems.every((item: IPrompt) => item.discussion !== "");
 
   return (
     <div className="mx-auto">
@@ -38,19 +39,14 @@ export default function Post({ items }) {
             download as json
           </button>
 
-          {filteredItems[0].discussion !== "" && (
-            <button
-              onClick={() => {
-                setShowDiscussion(true);
-              }}
-              className="hover:bg-gray-300 bg-gray-200 px-1 font-mono text-sm ml-4"
-            >
-              show discussion
-            </button>
+          {discussionPresent && (
+            <Link href={`/discussion/${id}`} passHref>
+              <button className="hover:bg-gray-300 bg-gray-200 px-1 font-mono text-sm ml-4">show discussion</button>
+            </Link>
           )}
         </div>
 
-        {showDiscussion && <Discussion text={filteredItems[0].discussion} showDiscussion={setShowDiscussion} />}
+        {showDiscussion && <Discussion text={filteredItems[filteredItems.length - 1].discussion} showDiscussion={setShowDiscussion} />}
 
         <div className="text-right text-sm my-auto">
           {filteredItems[0].cognitiveBias} - {filteredItems[0].participants} participants -

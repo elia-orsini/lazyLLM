@@ -142,7 +142,7 @@ const Gpt3Request = ({ secret }) => {
       <Title includeLinks={false} title="chatGPT battle mode" />
 
       <form className="w-full bg-gray-200 rounded-xl" onSubmit={handleSubmit}>
-        <div className="grid items-center px-3 rounded-xl py-3 mt-4 border border-black">
+        <div className="grid items-center px-3 rounded-xl py-3 mt-5 border border-black">
           <div className="flex">
             <input id="files" type="file" accept=".json" onChange={handleFileUpload} />
 
