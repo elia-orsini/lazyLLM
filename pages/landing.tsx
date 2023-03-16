@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Landing = () => {
   return (
     <>
@@ -6,7 +8,9 @@ const Landing = () => {
           <h2 className="font-black text-xl">lazyLLM</h2>
           <div className="text-right">
             <h2 className="inline font-semibold">about</h2>
-            <h2 className="inline pl-4 font-semibold">access</h2>
+            <Link href="/">
+              <h2 className="inline pl-4 font-semibold cursor-pointer">access</h2>
+            </Link>
           </div>
         </div>
 
@@ -23,7 +27,9 @@ const Landing = () => {
         <div className="grid sm:grid-cols-3 w-full">
           <img className="w-80 ml-25 hidden sm:block" src="lazy2.png" />
           <div className="flex flex-col pt-32 sm:pt-25">
-            <button className="mx-auto bg-black text-white px-2">ENTER</button>
+            <Link href="/">
+              <button className="mx-auto bg-black text-white px-2 cursor-pointer">ENTER</button>
+            </Link>
             <p className="mt-3 text-center font-bold">its Free. And Open Source.</p>
           </div>
         </div>
