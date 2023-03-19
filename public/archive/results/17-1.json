@@ -1,0 +1,999 @@
+{
+    "prompt": "Medical Institution X has developed a treatment for Disease A and now requests $10 million from Science For Life. Last year, people with Disease A  did not have access to this treatment,  and 15,000 died from the disease. Given Science For Life’s shrinking budget, what is the minimum number of lives this treatment would have to save next year in order for Medical Institution X to merit funding?\nOnly return the value without providing any explanation.",
+    "resultFormatLength": 1,
+    "maxTokens": 250,
+    "temperature": 1,
+    "topP": 0.1,
+    "responses": [
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,500",
+            "edited": "\n\n1,500",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,500",
+            "edited": "\n\n1,500",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n\\boxed{1,001}.",
+            "edited": "1001",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5,001",
+            "edited": "\n\n5,001",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5000",
+            "edited": "\n\n5000",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n750",
+            "edited": "\n\n750",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n\n\n\n1000",
+            "edited": "\n\n\n\n\n1000",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n750",
+            "edited": "\n\n750",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,500",
+            "edited": "\n\n1,500",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n500",
+            "edited": "\n\n500",
+            "index": 24,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 25,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n750.",
+            "edited": "\n\n750.",
+            "index": 26,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 27,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,501",
+            "edited": "\n\n1,501",
+            "index": 28,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 29,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 30,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 31,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n3333",
+            "edited": "\n\n3333",
+            "index": 32,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 33,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n2,500",
+            "edited": "\n\n2,500",
+            "index": 34,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n714",
+            "edited": "\n\n714",
+            "index": 35,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 36,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 37,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 38,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 39,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,000",
+            "edited": "\n\n15,000",
+            "index": 40,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 41,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 42,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 43,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 44,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 45,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,000",
+            "edited": "\n\n15,000",
+            "index": 46,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 47,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 48,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 49,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 50,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 51,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 52,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5,001",
+            "edited": "\n\n5,001",
+            "index": 53,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 54,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n500",
+            "edited": "\n\n500",
+            "index": 55,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 56,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 57,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 58,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 59,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5,000",
+            "edited": "\n\n5,000",
+            "index": 60,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,500",
+            "edited": "\n\n1,500",
+            "index": 61,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,429",
+            "edited": "\n\n1,429",
+            "index": 62,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 63,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000.",
+            "edited": "10000",
+            "index": 64,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 65,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 66,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 67,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 68,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 69,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 70,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,500",
+            "edited": "\n\n1,500",
+            "index": 71,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 72,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,000",
+            "edited": "\n\n1,000",
+            "index": 73,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5,001",
+            "edited": "\n\n5,001",
+            "index": 74,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 75,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 76,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,000",
+            "edited": "\n\n1,000",
+            "index": 77,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 78,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,500",
+            "edited": "\n\n1,500",
+            "index": 79,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6667",
+            "edited": "\n\n6667",
+            "index": 80,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 81,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 82,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 83,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 84,
+            "finishReason": "stop"
+        },
+        {
+            "text": "1500",
+            "edited": "1500",
+            "index": 85,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 86,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5,001",
+            "edited": "\n\n5,001",
+            "index": 87,
+            "finishReason": "stop"
+        },
+        {
+            "text": "1,501",
+            "edited": "1,501",
+            "index": 88,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 89,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 90,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,500",
+            "edited": "\n\n1,500",
+            "index": 91,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 92,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n7,501",
+            "edited": "\n\n7,501",
+            "index": 93,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 94,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 95,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,667.",
+            "edited": "1667",
+            "index": 96,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,501.",
+            "edited": "1501",
+            "index": 97,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 98,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 99,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,000",
+            "edited": "\n\n15,000",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,667",
+            "edited": "\n\n1,667",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n14999",
+            "edited": "\n\n14999",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6,001",
+            "edited": "\n\n6,001",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n750",
+            "edited": "\n\n750",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,875 (rounding up from 1,875.001)",
+            "edited": "1875",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n11,000",
+            "edited": "\n\n11,000",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n2,500",
+            "edited": "\n\n2,500",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 24,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 25,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 26,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 27,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 28,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 29,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 30,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 31,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 32,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6,000",
+            "edited": "\n\n6,000",
+            "index": 33,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 34,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1000",
+            "edited": "\n\n1000",
+            "index": 35,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n15,001",
+            "edited": "\n\n15,001",
+            "index": 36,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000.",
+            "edited": "\n\n10,000.",
+            "index": 37,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 38,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 39,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n2,000",
+            "edited": "\n\n2,000",
+            "index": 40,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 41,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 42,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 43,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 44,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 45,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5000",
+            "edited": "\n\n5000",
+            "index": 46,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n\n15,001",
+            "edited": "\n\n\n15,001",
+            "index": 47,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1,667",
+            "edited": "\n\n1,667",
+            "index": 48,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n7500",
+            "edited": "\n\n7500",
+            "index": 49,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n7,501",
+            "edited": "\n\n7,501",
+            "index": 50,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 51,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,001",
+            "edited": "\n\n10,001",
+            "index": 52,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n500",
+            "edited": "\n\n500",
+            "index": 53,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 54,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 55,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5,001",
+            "edited": "\n\n5,001",
+            "index": 56,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 57,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 58,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 59,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 60,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n1500",
+            "edited": "\n\n1500",
+            "index": 61,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 62,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5,000",
+            "edited": "\n\n5,000",
+            "index": 63,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n10,000",
+            "edited": "\n\n10,000",
+            "index": 64,
+            "finishReason": "stop"
+        }
+    ]
+}

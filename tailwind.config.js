@@ -20,6 +20,9 @@ module.exports = {
       height: {
         30: "30vh",
       },
+      text: {
+        xs: "0.75rem",
+      },
     },
   },
 };

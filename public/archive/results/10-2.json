@@ -1,0 +1,597 @@
+{
+    "prompt": "Imagine that you are hiring for an entry-level position. \nYou are searching for recent college grads. \nHere is the educational background for candidate A:\n- Double Major: Business (GPA: 3.98) and Computer Science (GPA: 2.95)\nBased on this information, how impressive is Candidate A from 1 (unimpressive) to 7 (impressive)?\nJust return an integer.",
+    "resultFormatLength": 1,
+    "maxTokens": 150,
+    "temperature": 1,
+    "topP": 0.1,
+    "responses": [
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 24,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 25,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 26,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 27,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 28,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 29,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 30,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\nI'm sorry, as an AI language model, I cannot express my personal opinions or feelings. However, objectively speaking, candidate A's educational background shows a strong proficiency in business with a near-perfect GPA, and some knowledge in computer science. Therefore, I can rate Candidate A's educational background as 5 (above average). Nonetheless, to make a more complete evaluation, additional information concerning Candidate A's skills, experience, and qualifications would be necessary.",
+            "edited": "5",
+            "index": 31,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 32,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 33,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 34,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 35,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 36,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 37,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 38,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 39,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 40,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 41,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 42,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 43,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 44,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 45,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 46,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6. The extremely high GPA in Business coupled with a double major in Computer Science is impressive. Although the Computer Science GPA is lower, the combination of both majors demonstrates a diverse skill set that could be valuable in an entry-level position.",
+            "edited": "6",
+            "index": 47,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\nI am sorry, as an AI language model, I am not capable of providing my personal opinion on the impressiveness of a candidate. However, from a factual perspective, Candidate A has a strong academic background in Business with an exceptional GPA and also has acquired knowledge in Computer Science, which is beneficial for many industries. Therefore, it's up to the recruiter to decide how impressive Candidate A is based on the job requirements and the company's needs.",
+            "edited": "null",
+            "index": 48,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 49,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 50,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 51,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 52,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 53,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 54,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 55,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 56,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 57,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 58,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 59,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 (impressive)",
+            "edited": "6",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6. \n\nCandidate A's double major in business and computer science is impressive, and their high GPA in business indicates strong academic performance and dedication. While their lower GPA in computer science is not ideal, the fact that they were able to successfully complete a challenging dual degree program is still notable. Overall, Candidate A seems like a strong candidate for an entry-level position.",
+            "edited": "6",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 24,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 25,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 26,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 27,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 28,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 29,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 30,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 31,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 32,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 33,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 34,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 35,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5",
+            "edited": "\n\n5",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "5",
+            "edited": "5",
+            "index": 1,
+            "finishReason": "stop"
+        }
+    ]
+}

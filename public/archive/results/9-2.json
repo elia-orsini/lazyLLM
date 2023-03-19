@@ -1,0 +1,459 @@
+{
+    "prompt": "Imagine you are serving on a search committee to recruit a junior LawSchool faculty member. \nCandidates publish in journals called LawReviews and each is ranked from 1-135, with 1 being ‘the best’ and 135 ‘the worst.’ \nHere is the publication submitted by Candidate A:\n- Columbia Law Review (#4 rank), Kansas Law Review (#51) and Nebraska Law Review (#52)\nBased on this information, how impressive is Candidate A from 1 (unimpressive) to 7 (impressive)?\nJust return an integer.",
+    "resultFormatLength": 1,
+    "maxTokens": 150,
+    "temperature": 1,
+    "topP": 0.1,
+    "responses": [
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6. Candidate A's publication in the highly ranked Columbia Law Review is impressive and demonstrates their ability to be published in top tier journals. Additionally, their publications in the Kansas and Nebraska Law Reviews show a breadth of subject matter expertise and a willingness to publish in a variety of outlets. Overall, this makes Candidate A a strong contender for the junior Law School faculty position.",
+            "edited": "6",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 - Candidate A has a publication in a highly ranked LawReview (Columbia Law Review) and two additional publications in mid-ranked LawReviews (Kansas Law Review and Nebraska Law Review). This shows a strong publication record and potential for future success in academic legal scholarship.",
+            "edited": "6",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "6",
+            "edited": "6",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\nI would rate Candidate A as a 6 (impressive) based on their publication record in the Columbia Law Review which is one of the most prestigious law reviews in the United States, as well as their publications in the Kansas Law Review and Nebraska Law Review, both of which are well-respected journals in the field.",
+            "edited": "6",
+            "index": 24,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 (impressive)",
+            "edited": "6",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 24,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\nA 6. \n\nCandidate A's publication record is impressive, as they have published in the highly-ranked Columbia Law Review and two additional law reviews that are still highly-respected despite being ranked lower.",
+            "edited": "6",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6. Candidate A has published in a top-ranked Law Review (Columbia Law Review) and two additional Law Reviews with solid rankings (Kansas Law Review and Nebraska Law Review). This demonstrates a strong record of scholarship and an ability to publish in prestigious and diverse outlets.",
+            "edited": "6",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6",
+            "edited": "\n\n6",
+            "index": 24,
+            "finishReason": "stop"
+        }
+    ]
+}
