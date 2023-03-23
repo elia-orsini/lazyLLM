@@ -1,11 +1,11 @@
 import TextWithBreak from "./TextWithBreak";
 
-export default function Discussion({ text, showDiscussion }) {
+export default function PopUp({ text, showDiscussion }) {
   return (
     <div className="absolute w-full top-0 left-0 flex h-screen">
       <div className="my-auto mx-auto max-w-4xl bg-white z-10 rounded-lg border border-black shadow-lg">
         <div className="text-right pr-4 pt-2 bg-gray-100 rounded-t-lg flex justify-between border-b border-black">
-          <div className="text-left flex pb-2 px-4 font-mono text-sm">discussion</div>
+          <div className="text-left flex pb-2 px-4 font-mono text-sm">what is DAN mode?</div>
           <button className="pb-2" onClick={() => showDiscussion(false)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
