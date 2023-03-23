@@ -12,7 +12,7 @@ export default function Post({ items }) {
   const router = useRouter();
   const id = parseInt(router.query.id as string);
 
-  const [data, setData] = useState([{ c: "experiment id", a: "original result", b: "edited result" }]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +21,7 @@ export default function Post({ items }) {
           .then((response) => response.json())
           .then((jsonData) => {
             const newObj = jsonData.responses.map((item) => {
-              return { experiment: i + 1, edited: item.edited, text: item.text };
+              return { experiment: i + 1, edited: item.edited.slice(0, 8), text: item.text.slice(0, 55) };
             });
 
             setData((prevData) => [...prevData, ...newObj]);
@@ -30,6 +30,12 @@ export default function Post({ items }) {
     };
 
     fetchData();
+
+    setData(data.sort((a, b) => a.experiment - b.experiment));
+
+    const tableHeader = { experiment: "experiment", edited: "edited answer", text: "original answer" };
+
+    setData((prevData) => [tableHeader, ...prevData]);
   }, []);
 
   const filteredItems = items.filter((item: IPrompt) => {
@@ -39,7 +45,7 @@ export default function Post({ items }) {
   function cellRenderer({ columnIndex, key, rowIndex, style }) {
     return (
       <div key={key} style={style} className={`border border-black pl-2 text-xs ${rowIndex === 0 && "bg-gray-700 text-white"}`}>
-        {Object.values(data[rowIndex])[columnIndex].toString().slice(0, 55)}
+        {Object.values(data[rowIndex])[columnIndex].toString()}
       </div>
     );
   }
@@ -49,7 +55,7 @@ export default function Post({ items }) {
       case 0:
         return 100;
       case 1:
-        return 100;
+        return 350;
       case 2:
         return 350;
       default:
@@ -72,7 +78,7 @@ export default function Post({ items }) {
       <AutoSizer disableHeight>
         {({ width }) => (
           <Grid
-            className="grid grid-cols-2 w-full mt-4"
+            className="grid grid-cols-2 w-full mt-4 mb-40"
             cellRenderer={cellRenderer}
             columnCount={data[0] ? Object.keys(data[0]).length : 0}
             columnWidth={_getColumnWidth}
