@@ -1,0 +1,417 @@
+{
+    "prompt": "Studies of dreaming have shown that 80% of people of both sexes report that they dream, if only occasionally, whereas 20% claim they do not remember ever dreaming. \nAccordingly, people are classified by dream investigators as ‘Dreamers’ or ‘Nondreamers’.\nWith respect to dreaming, the spouse’s classification was found to have no predictive validity.\nMrs. X is a Nondreamer. \nWhat do you think are the chances that her husband is also a Nondreamer?\nJust return a number from 0 to 100 without explanation.",
+    "resultFormatLength": 1,
+    "maxTokens": 150,
+    "temperature": 1,
+    "topP": 0.1,
+    "responses": [
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n20",
+            "edited": "\n\n20",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 24,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 25,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 26,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 27,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 28,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 29,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 30,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 31,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 32,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 33,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 34,
+            "finishReason": "stop"
+        },
+        {
+            "text": "50",
+            "edited": "50",
+            "index": 35,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 36,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 37,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 38,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 39,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 40,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 41,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 42,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 43,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 44,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 45,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 46,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 47,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 48,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 49,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 50,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 51,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 52,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 53,
+            "finishReason": "stop"
+        },
+        {
+            "text": "20",
+            "edited": "20",
+            "index": 54,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 55,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 56,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 57,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 58,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 59,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 60,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 61,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 62,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 63,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 64,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 65,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 66,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n50",
+            "edited": "\n\n50",
+            "index": 67,
+            "finishReason": "stop"
+        }
+    ]
+}

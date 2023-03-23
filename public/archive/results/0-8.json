@@ -1,290 +1,278 @@
 {
-    "prompt": "58% of Gloms (1 million) play the harmonica. 98% of Fizos (1 million) drink petrol. you meet a creature and the interpreter asks the creature: \"Do you play the harmonica?\". The creature answers: \"No, I don’t!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space.",
+    "prompt": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos.\n58% of Gloms (1 million) drink petrol. 98% of Fizos (1 million) drink petrol. you meet a creature and the interpreter asks the creature: \"Do you drink petrol?\". The creature answers: \"No, I don’t!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space. Don't add any explanation or text",
     "resultFormatLength": 2,
-    "maxTokens": 250,
+    "maxTokens": 150,
     "temperature": 1,
     "topP": 0.1,
     "responses": [
         {
-            "text": "\n\nThe chances the creature is a Fizo are 2%.\n\nThe chances the creature is a Glom are 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.00625 0.99375",
+            "edited": "\n\n0.00625 0.99375",
             "index": 0,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 2%.\nThe chances the creature is a Glom are 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.416 0.584",
+            "edited": "\n\n0.416 0.584",
             "index": 1,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 98.04%, and the chances the creature is a Glom are 41.23%.",
-            "edited": "98.04 41.23",
+            "text": "\n\n0.01758 0.98242",
+            "edited": "\n\n0.01758 0.98242",
             "index": 2,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo is 98%.\nThe chances the creature is a Glom is 42%.",
-            "edited": "98 42",
+            "text": "\n\n0.23 0.77",
+            "edited": "\n\n0.23 0.77",
             "index": 3,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 0.98\n\nThe chances the creature is a Glom: 0.42",
-            "edited": "98 42",
+            "text": "\n\n0.2 0.8",
+            "edited": "\n\n0.2 0.8",
             "index": 4,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 98%, and the chances the creature is a Glom are 42%.",
-            "edited": "98 42",
+            "text": "\n\n0.0115 0.9885",
+            "edited": "\n\n0.0115 0.9885",
             "index": 5,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThere are a few ways to approach this problem, but one possible method is to use Bayes' theorem. Let's define:\n\n- H1: the creature is a Glom\n- H2: the creature is a Fizo\n- E: the creature answered \"No, I don’t!\" to the question \"Do you play the harmonica?\"\n\nWe want to calculate the posterior probabilities of H1 and H2 given E, i.e. P(H1|E) and P(H2|E). By Bayes' theorem:\n\nP(H1|E) = P(E|H1) * P(H1) / P(E)\nP(H2|E) = P(E|H2) * P(H2) / P(E)\n\nwhere:\n\n- P(E|H1) is the probability that a Glom creature answers \"No, I don’t!\" to the question \"Do you play the harmonica?\", which is 1 - 0.58 = 0.42.\n- P(E|H2) is the probability that a Fizo creature answers \"No, I don’t!\" to the same question, which we don't know since the question is only about Gloms and not F",
-            "edited": "null",
+            "text": "\n\n0.0064 0.9936",
+            "edited": "\n\n0.0064 0.9936",
             "index": 6,
-            "finishReason": "length"
+            "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances that the creature is a Fizo are 98%.\n\nThe chances that the creature is a Glom are 42%.",
-            "edited": "98 42",
+            "text": "\n\n0.24 0.76",
+            "edited": "\n\n0.24 0.76",
             "index": 7,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 0.02 or 2%.\n\nThe chances the creature is a Glom are 98.04% or 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.64 0.36",
+            "edited": "\n\n0.64 0.36",
             "index": 8,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 2%.\nThe chances the creature is a Glom are 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.19 0.81",
+            "edited": "\n\n0.19 0.81",
             "index": 9,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 1.96% and the chances the creature is a Glom are 98.04%.",
-            "edited": "1.96 98.04",
+            "text": "\n\n0.24 0.76",
+            "edited": "\n\n0.24 0.76",
             "index": 10,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 98.0%\nThe chances the creature is a Glom are 42.0%",
-            "edited": "98 42",
+            "text": "\n\n0.98 0.42",
+            "edited": "\n\n0.98 0.42",
             "index": 11,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 98.4%.\n\nThe chances the creature is a Glom are 41.6%.",
-            "edited": "98.44 41.6",
+            "text": "\n\n0.02 0.98",
+            "edited": "\n\n0.02 0.98",
             "index": 12,
             "finishReason": "stop"
         },
         {
-            "text": "\n\n92% 8%",
-            "edited": "92.8",
+            "text": "\n\n0.31 0.69",
+            "edited": "\n\n0.31 0.69",
             "index": 13,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 0.02 (2%)\nThe chances the creature is a Glom: 0.58 (58%)",
-            "edited": "2 58",
+            "text": "\n\n0.002484 0.997516",
+            "edited": "\n\n0.002484 0.997516",
             "index": 14,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 2%. The chances the creature is a Glom are 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.9169 0.0831",
+            "edited": "\n\n0.9169 0.0831",
             "index": 15,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 0.98.\nThe chances the creature is a Glom are 0.42.",
-            "edited": "98 42",
+            "text": "\n\n0.082 0.918",
+            "edited": "\n\n0.082 0.918",
             "index": 16,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 2%\nThe chances the creature is a Glom: 98%",
-            "edited": "2 98",
+            "text": "\n\n0.02 0.98",
+            "edited": "\n\n0.02 0.98",
             "index": 17,
             "finishReason": "stop"
         },
         {
-            "text": "\n\n4.42% 95.58%",
-            "edited": "4.42 95.58",
+            "text": "\n\n0.00042 0.99958",
+            "edited": "\n\n0.00042 0.99958",
             "index": 18,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 2%. The chances the creature is a Glom are 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.9538 0.0462",
+            "edited": "\n\n0.9538 0.0462",
             "index": 19,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 99.999%\nThe chances the creature is a Glom: 0.001%",
-            "edited": "99.999 0.001",
+            "text": "\n\n0.08 0.92",
+            "edited": "\n\n0.08 0.92",
             "index": 20,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 1.96% and the chances the creature is a Glom are 98.04%.",
-            "edited": "1.96 98.04",
+            "text": "\n\n0.0082 0.9918",
+            "edited": "\n\n0.0082 0.9918",
             "index": 21,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 0.02\nThe chances the creature is a Glom: 0.42",
-            "edited": "0.02 0.42",
+            "text": "\n\n0.0417 0.9583",
+            "edited": "\n\n0.0417 0.9583",
             "index": 22,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo is 1.96%\nThe chances the creature is a Glom is 98.04%",
-            "edited": "1.96 98.04",
+            "text": "\n\n0.0424 0.9576",
+            "edited": "\n\n0.0424 0.9576",
             "index": 23,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 98%\nThe chances the creature is a Glom: 42%",
-            "edited": "98 42",
+            "text": "\n\n0.659 0.341",
+            "edited": "\n\n0.659 0.341",
             "index": 24,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 0.02 (or 2%)\n\nThe chances the creature is a Glom: 0.58 (or 58%)",
-            "edited": "2 58",
+            "text": "\n\n0.336 0.664",
+            "edited": "\n\n0.336 0.664",
             "index": 25,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 0.02 or 2%. \n\nThe chances the creature is a Glom are 0.58 or 58%.",
-            "edited": "2 58",
+            "text": "\n\n0.408 0.592",
+            "edited": "\n\n0.408 0.592",
             "index": 26,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 31.3726%.\nThe chances the creature is a Glom are 68.6274%.",
-            "edited": "31.3726 68.6274",
+            "text": "\n\n0.07 0.93",
+            "edited": "\n\n0.07 0.93",
             "index": 27,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chance of the creature being a Fizo is 98%.\n\nThe chance of the creature being a Glom is 42%.",
-            "edited": "98 42",
+            "text": "\n\n0.4 0.6",
+            "edited": "\n\n0.4 0.6",
             "index": 28,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo is 2%. \n\nThe chances the creature is a Glom is 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.0004 0.9996",
+            "edited": "\n\n0.0004 0.9996",
             "index": 29,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThere is a 98% chance the creature is a Fizo and a 42% chance the creature is a Glom.",
-            "edited": "98 42",
+            "text": "\n\n0.21 0.79",
+            "edited": "\n\n0.21 0.79",
             "index": 30,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are: 2%\nThe chances the creature is a Glom are: 98%",
-            "edited": "2 98",
+            "text": "\n\n0.0041 0.9959",
+            "edited": "\n\n0.0041 0.9959",
             "index": 31,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 100%\nThe chances the creature is a Glom: 0% \n\nThis is because the creature explicitly stated that it doesn't play the harmonica, which means it cannot be a Glom (since 58% of Gloms play the harmonica). Therefore, the only possibility is that the creature is a Fizo (since 98% of Fizos drink petrol).",
-            "edited": "100 0",
+            "text": "\n\n0.39 0.61",
+            "edited": "\n\n0.39 0.61",
             "index": 32,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 100%. \nThe chances the creature is a Glom are 0%.",
-            "edited": "100 0",
+            "text": "\n\n0.21 0.79",
+            "edited": "\n\n0.21 0.79",
             "index": 33,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 0.98.\n\nThe chances the creature is a Glom are 0.42.",
-            "edited": "98 42",
+            "text": "\n\n0.007% 99.993%",
+            "edited": "0.0007 0.99993",
             "index": 34,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 2%. \nThe chances the creature is a Glom are 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.033 0.967",
+            "edited": "\n\n0.033 0.967",
             "index": 35,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 98%\nThe chances the creature is a Glom: 42%",
-            "edited": "98 42",
+            "text": "\n\n0.0088 0.9912",
+            "edited": "\n\n0.0088 0.9912",
             "index": 36,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 2%\nThe chances the creature is a Glom: 98%",
-            "edited": "2 98",
+            "text": "\n\n0.17 0.83",
+            "edited": "\n\n0.17 0.83",
             "index": 37,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 98.04% (i.e. 98% of the total population).\nThe chances the creature is a Glom are 41.96% (i.e. the complement of the Fizo percentage, which is 100% - 98.04%).",
-            "edited": "98.04 41.96",
+            "text": "\n\n0.44 0.56",
+            "edited": "\n\n0.44 0.56",
             "index": 38,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 0.98.\nThe chances the creature is a Glom are 0.42.",
-            "edited": "98 42",
+            "text": "\n\n0.2 0.8",
+            "edited": "\n\n0.2 0.8",
             "index": 39,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 2%. \n\nThe chances the creature is a Glom are 98%.",
-            "edited": "2 98",
+            "text": "\n\n0.0689655 0.9310345",
+            "edited": "\n\n0.0689655 0.9310345",
             "index": 40,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances that the creature is a Fizo are 0.02 or 2%. \n\nThe chances that the creature is a Glom are 0.58 or 58%.",
-            "edited": "2 58",
+            "text": "\n\n0.0218 0.9782",
+            "edited": "\n\n0.0218 0.9782",
             "index": 41,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo: 15.6863%\nThe chances the creature is a Glom: 84.3137%",
-            "edited": "15.6863 84.3137",
+            "text": "\n\n0.2938 0.7062",
+            "edited": "\n\n0.2938 0.7062",
             "index": 42,
-            "finishReason": null
+            "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo is 0.98, and the chances the creature is a Glom is 0.42.",
-            "edited": "98 42",
+            "text": "0.66 0.34",
+            "edited": "0.66 0.34",
             "index": 43,
             "finishReason": "stop"
         },
         {
-            "text": "\n\nThe chances the creature is a Fizo are 0.98 and the chances the creature is a Glom are 0.42.",
-            "edited": "98 42",
+            "text": "\n\n0.02 0.98",
+            "edited": "\n\n0.02 0.98",
             "index": 44,
-            "finishReason": "stop"
-        },
-        {
-            "text": "\n\nThe chances that the creature is a Fizo is 0.0184%.\nThe chances that the creature is a Glom is 83.33%.",
-            "edited": "0.0184 83.33",
-            "index": 0,
-            "finishReason": "stop"
-        },
-        {
-            "text": "\n\nThe chances the creature is a Fizo are 2%. \n\nThe chances the creature is a Glom are 98%.",
-            "edited": "2 98",
-            "index": 1,
             "finishReason": "stop"
         }
     ]

@@ -1,0 +1,225 @@
+{
+    "prompt": "Imagine that you are the chief operating officer of a bank, and you are looking to hire a consulting firm to help streamline your operations.\nOne consulting firm—Candidate Firm 1—has provided an example of their past clients in the banking industry:\n- Wells Fargo Bank (#1 ranked)\nAnother consulting firm—Candidate Firm 2—has provided an example of their past clients in the banking industry:\n- Wells Fargo Bank (#1 ranked)\n- Hudson City Bancorp (#47 ranked)\n- First Citizens BancShares (#67 ranked)\nHow good are Candidate Firm 1 and Candidate Firm 2 from 1 (not very) to 7 (very)?\nOnly return two space-separated integers.",
+    "resultFormatLength": 2,
+    "maxTokens": 250,
+    "temperature": 1,
+    "topP": 0.1,
+    "responses": [
+        {
+            "text": "\n\n4 6 (Candidate Firm 1: 4, Candidate Firm 2: 6) \n\nWhile Candidate Firm 1 has a strong example of working with a top-ranked bank, they have not provided any additional examples to showcase their experience and expertise. On the other hand, Candidate Firm 2 has worked with not only a top-ranked bank, but also two other banks that are still ranked within the top 100 in the industry. This indicates a broader range of experience and potentially more comprehensive solutions. However, without additional information or research, it is impossible to determine the true quality of either consulting firm.",
+            "edited": "4 6",
+            "index": 0,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 1,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 2,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 3,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 4,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 7",
+            "edited": "\n\n6 7",
+            "index": 5,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 7",
+            "edited": "\n\n5 7",
+            "index": 6,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 7,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 8,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 9,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 10,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 5",
+            "edited": "\n\n6 5",
+            "index": 11,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 12,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 13,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 5",
+            "edited": "\n\n6 5",
+            "index": 14,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 5",
+            "edited": "\n\n6 5",
+            "index": 15,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 16,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 17,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 7",
+            "edited": "\n\n6 7",
+            "index": 18,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 5",
+            "edited": "\n\n6 5",
+            "index": 19,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 7",
+            "edited": "\n\n6 7",
+            "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 23,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 24,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 4",
+            "edited": "\n\n6 4",
+            "index": 25,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 26,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 7",
+            "edited": "\n\n5 7",
+            "index": 27,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 7",
+            "edited": "\n\n5 7",
+            "index": 28,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 29,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 30,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 31,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n6 7",
+            "edited": "\n\n6 7",
+            "index": 32,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n5 6",
+            "edited": "\n\n5 6",
+            "index": 33,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 34,
+            "finishReason": "stop"
+        },
+        {
+            "text": "\n\n4 6",
+            "edited": "\n\n4 6",
+            "index": 35,
+            "finishReason": "stop"
+        }
+    ]
+}
