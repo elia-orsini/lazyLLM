@@ -8,7 +8,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { IPrompt } from "types";
 import { useState } from "react";
-import Discussion from "@components/Discussion";
 
 export default function Post({ items }) {
   const [showDiscussion, setShowDiscussion] = useState<boolean>(false);
@@ -45,8 +44,6 @@ export default function Post({ items }) {
             </Link>
           )}
         </div>
-
-        {showDiscussion && <Discussion text={filteredItems[filteredItems.length - 1].discussion} showDiscussion={setShowDiscussion} />}
 
         <div className="text-right text-sm my-auto">
           {filteredItems[0].cognitiveBias} - {filteredItems[0].participants} participants -
