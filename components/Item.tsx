@@ -11,7 +11,7 @@ export default function Item({ content, fullData }) {
   return (
     <a href={`prompts/${content.id}`}>
       <div className="text-xs h-full mx-auto border border-black rounded px-2 sm:w-80 w-72 hover:bg-gray-100 text-left">
-        <p className="py-1">{content.prompt.slice(0, 130)}...</p>
+        <p className="py-1 overflow-hidden">{content.prompt.slice(0, 130)}...</p>
 
         <hr className="border-black my-0" />
 
@@ -23,8 +23,8 @@ export default function Item({ content, fullData }) {
 
         <hr className="border-black my-0" />
 
-        <div className="py-1 font-normal h-6 inline">
-          {filteredItems.length !== content.variants && <span className="font-bold">MISSING VARIANTS! -</span>}
+        <div className="py-1 font-normal h-6 overflow-hidden">
+          {filteredItems.length !== content.variants && <span className="font-bold">MISSING VARIANTS!</span>}
           {allVariantsTested ? <span> TESTED </span> : <span> NOT TESTED YET </span>}
           {discussionPresent && <span>- DISCUSSED </span>}
         </div>
