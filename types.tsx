@@ -24,3 +24,8 @@ export interface IMessage {
   index: number;
   finishReason: string;
 }
+
+export interface EvalSample {
+  input: [ChatMessage];
+  ideal: string;
+}
