@@ -26,6 +26,8 @@ const Gpt3Request = ({ secret }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 
+  const [qaValues, setQaValues] = useState<string[]>([]);
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     const reader = new FileReader();
@@ -48,52 +50,23 @@ const Gpt3Request = ({ secret }) => {
 
       setPrompts(evalsInputs);
       setIdeals(evalsIdeals);
+      setPrompt(evalsInputs[0]);
     };
 
     reader.readAsText(file as Blob);
   };
 
-  const fetchEvalSample = () => {
-    axios
-      .get(
-        "https://github.com/openai/evals/raw/main/evals/registry/data/chess/match.jsonl"
-      )
-      .then((response) => {
-        const jsonData = response.data;
-
-        const lines = jsonData.split("\n");
-        const data = [];
-        for (let i = 0; i < lines.length; i++) {
-          if (lines[i]) {
-            data.push(JSON.parse(lines[i]));
-          }
-        }
-
-        setExperimentMetadata(data);
-
-        const evalsInputs = data.map((obj) => obj.input);
-        const evalsIdeals = data.map((obj) => obj.ideal);
-
-        setPrompts(evalsInputs);
-        setIdeals(evalsIdeals);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
-  const handleSubmit = async (
-    event: React.FormEvent<HTMLFormElement>
-  ): Promise<Array<string>> => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const API_KEY = secret;
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
-    const responses = [];
+    const responsesArray = [];
 
     const initialMessages = prompt;
 
     setLoading(true);
+    setQaValues([]);
 
     await axios
       .post(
@@ -121,7 +94,7 @@ const Gpt3Request = ({ secret }) => {
         setTime(date);
 
         response.data.choices.map((choice) =>
-          responses.push({
+          responsesArray.push({
             text: choice.message.content,
             edited: choice.message.content,
             index: choice.index,
@@ -133,60 +106,58 @@ const Gpt3Request = ({ secret }) => {
         setError(response.response.data.error.message);
       });
 
-    setResponses(responses);
-
-    qaNumber(initialMessages[0], responses[0].text);
-
-    return responses;
+    setResponses(responsesArray);
   };
 
-  const qaNumber = async (
-    queston: ChatMessage,
-    response: string,
-    type = "float"
-  ) => {
-    const formattedResponse = { role: "system", content: response };
-    const qaPrompt = [queston];
+  const qaNumber = async (type="number") => {
+    const promises = responses.map((r) => {
+      const qaPrompt = [prompt[0]];
 
-    qaPrompt.push(formattedResponse);
+      const formattedResponse = { role: "system", content: r.text };
+      qaPrompt.push(formattedResponse);
 
-    const floatPrompt =
-      "return your answer as a number with no other text. format your answer as a python float.";
-    const intPrompt =
-      "return your answer as a number with no other text. format your answer as a python int.";
+      const parseNumber =
+        "Convert your previous answer to a number with no other text (without quotes or punctuation). return only numbers.";
+      const parseText =
+        "Answer the question by printing only the correct answer (without quotes or punctuation) with no other text.";
 
-    // github.com/openai/evals/blob/main/evals/elsuite/modelgraded/classify.py
-    const magicQaPrompt = {
-      role: "user",
-      content: type === "int" ? intPrompt : floatPrompt,
-    };
+      // github.com/openai/evals/blob/main/evals/elsuite/modelgraded/classify.py
+      const magicQaPrompt = {
+        role: "user",
+        content: type==="number" ? parseNumber : parseText,
+      };
 
-    qaPrompt.push(magicQaPrompt);
+      qaPrompt.push(magicQaPrompt);
 
-    const API_KEY = secret;
-    const API_URL = "https://api.openai.com/v1/chat/completions";
+      const API_KEY = secret;
+      const API_URL = "https://api.openai.com/v1/chat/completions";
 
-    await axios
-      .post(
-        API_URL,
-        {
-          model: "gpt-3.5-turbo-0301",
-          messages: qaPrompt,
-          max_tokens: maxTokens,
-          n: numberOfTimes,
-          temperature: temperature,
-          top_p: 1,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${API_KEY}`,
+      return axios
+        .post(
+          API_URL,
+          {
+            model: "gpt-3.5-turbo-0301",
+            messages: qaPrompt,
+            max_tokens: maxTokens,
+            n: numberOfTimes,
+            temperature: 0,
+            top_p: 1,
           },
-        }
-      )
-      .then((response) => {
-        console.log(response.data.choices[0].message.content);
-      });
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${API_KEY}`,
+            },
+          }
+        )
+        .then((response) => {
+          return response.data.choices[0].message.content;
+        });
+    });
+
+    Promise.all(promises).then((answers) => {
+      setQaValues(answers);
+    });
   };
 
   const customEdit = (
@@ -241,8 +212,6 @@ const Gpt3Request = ({ secret }) => {
               onChange={handleFileUpload}
             />
 
-            <button type="button" onClick={()=>fetchEvalSample()}>HELLO</button>
-
             <button
               type="button"
               className="px-2 border border-black hover:bg-gray-200"
@@ -294,6 +263,26 @@ const Gpt3Request = ({ secret }) => {
               current index: {currentIndex} /{" "}
               {prompts.length > 0 ? prompts.length - 1 : 0}
             </p>
+
+            <button
+              type="button"
+              className="border border-black px-2 ml-10"
+              onClick={() => {
+                qaNumber();
+              }}
+            >
+              QA NUMBER
+            </button>
+
+            <button
+              type="button"
+              className="border border-black px-2 ml-10"
+              onClick={() => {
+                qaNumber("text");
+              }}
+            >
+              QA TEXT
+            </button>
           </div>
 
           <div className="flex mt-4">
@@ -435,7 +424,7 @@ const Gpt3Request = ({ secret }) => {
       </h3>
       {responses.length > 0 ? (
         <div className="border-t border-l border-r mt-1 border-black rounded">
-          {responses.map((item) => (
+          {responses.map((item, i) => (
             <div
               key={item.index}
               className="py-2 px-2 border-b border-black flex flex-col"
@@ -449,7 +438,11 @@ const Gpt3Request = ({ secret }) => {
                 <label className="mr-2 my-auto text-sm uppercase">
                   edit answer:
                 </label>
-                <input type="text" className="px-4 border border-black" />
+                <input
+                  type="text"
+                  defaultValue={qaValues[i]}
+                  className="px-4 border border-black"
+                />
                 <button
                   type="submit"
                   name="edit"
