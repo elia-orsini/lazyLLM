@@ -307,7 +307,9 @@ const Gpt3Request = ({ secret }) => {
 
           <div className="flex mt-4">
             {prompt && (
-              <PromptVisualiser evalSample={{ input: prompt, ideal: "" }} />
+              <PromptVisualiser
+                evalSample={{ input: prompt, ideal: "" } as any}
+              />
             )}
 
             {loading ? (
