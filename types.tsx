@@ -29,3 +29,17 @@ export interface EvalSample {
   input: [ChatMessage];
   ideal: string;
 }
+
+export type EvalYAMLFile = {
+  (key: string): {
+    id: string;
+    description: string;
+    metrics: [string];
+  };
+  (key: string): {
+    class: string;
+    args: {
+      samples_jsonl: string;
+    };
+  };
+};

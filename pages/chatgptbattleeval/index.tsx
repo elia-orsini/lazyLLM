@@ -200,7 +200,7 @@ const Gpt3Request = ({ secret }) => {
 
   return (
     <div className="mx-auto h-screen w-full px-10">
-      <Title includeLinks={false} title="chatGPT eval mode" />
+      <Title includeDefaultLinks={false} title="chatGPT" />
 
       <form className="w-full bg-gray-200 rounded-xl" onSubmit={handleSubmit}>
         <div className="grid items-center px-3 rounded-xl py-3 mt-5 border border-black">
