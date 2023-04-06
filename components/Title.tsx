@@ -5,7 +5,6 @@ export default function Title({
   includeDefaultLinks = true,
   title = "prompts for cognitive biases",
 }) {
-
   return (
     <div className="w-full flex mt-4 text-center border-b border-black pb-3">
       <div className="w-full grid grid-cols-2">
@@ -31,13 +30,13 @@ export default function Title({
         )}
 
         <div className="text-right">
-          {links.map((link) => (
-              <Link href={link.action} passHref>
-                <button className="uppercase text-sm mt-2 my-auto font-semibold hover:bg-gray-200 px-1">
-                  {link.text}
-                </button>
-              </Link>
-            ))}
+          {links.map((link, i) => (
+            <Link key={i} href={link.action} passHref>
+              <button className="uppercase text-sm mt-2 my-auto font-semibold hover:bg-gray-200 px-1">
+                {link.text}
+              </button>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

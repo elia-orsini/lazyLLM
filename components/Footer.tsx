@@ -12,7 +12,9 @@ export default function Footer({
           <p className="inline font-semibold text-sm lowercase tracking-wide">
             lazyLLM © 2023
           </p>
-          <p className="text-xs tracking-wide">images from OpenAI's DALL-E</p>
+          <p className="text-xs tracking-wide">
+            images from OpenAI&apos;s DALL-E
+          </p>
         </div>
 
         <div className="text-right">
