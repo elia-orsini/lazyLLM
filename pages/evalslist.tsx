@@ -59,7 +59,8 @@ const EvalsList = () => {
       </div>
 
       <div className="grid grid-cols-3 mt-10">
-        {evalsList && evalsList.map((item) => <EvalItem item={item} />)}
+        {evalsList &&
+          evalsList.map((item, i) => <EvalItem key={i} item={item} />)}
       </div>
 
       <Footer />
