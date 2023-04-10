@@ -55,7 +55,9 @@ const Gpt3Request = ({ secret }) => {
     reader.readAsText(file as Blob);
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<Array<string>> => {
+  const handleSubmit = async (
+    event: React.FormEvent<HTMLFormElement>
+  ): Promise<Array<string>> => {
     event.preventDefault();
     const API_KEY = secret;
     const API_URL = "https://api.openai.com/v1/chat/completions";
@@ -125,7 +127,10 @@ const Gpt3Request = ({ secret }) => {
     return responses;
   };
 
-  const customEdit = (event: React.FormEvent<HTMLFormElement>, item: IMessage): void => {
+  const customEdit = (
+    event: React.FormEvent<HTMLFormElement>,
+    item: IMessage
+  ): void => {
     event.preventDefault();
 
     // @ts-ignore
@@ -151,7 +156,10 @@ const Gpt3Request = ({ secret }) => {
   const triggerDownloadJSON = () => {
     const jsonFile = {
       prompt: prompt,
-      resultFormatLength: currentIndex > 0 ? experimentMetadata[currentIndex - 1].resultFormatLength : 1,
+      resultFormatLength:
+        currentIndex > 0
+          ? experimentMetadata[currentIndex - 1].resultFormatLength
+          : 1,
       maxTokens: maxTokens,
       temperature: temperature,
       topP: topP,
@@ -160,17 +168,27 @@ const Gpt3Request = ({ secret }) => {
 
     console.log(jsonFile);
 
-    downloadJSON(jsonFile, `${currentIndex > 0 ? experimentMetadata[currentIndex - 1].id : 0}-${currentIndex}`);
+    downloadJSON(
+      jsonFile,
+      `${
+        currentIndex > 0 ? experimentMetadata[currentIndex - 1].id : 0
+      }-${currentIndex}`
+    );
   };
 
   return (
     <div className="mx-auto h-screen w-full px-10">
-      <Title includeDefaultLinks={false} title="chatGPT battle mode" />
+      <Title includeDefaultLinks={false} />
 
       <form className="w-full bg-gray-200 rounded-xl" onSubmit={handleSubmit}>
         <div className="grid items-center px-3 rounded-xl py-3 mt-5 border border-black">
           <div className="flex">
-            <input id="files" type="file" accept=".json" onChange={handleFileUpload} />
+            <input
+              id="files"
+              type="file"
+              accept=".json"
+              onChange={handleFileUpload}
+            />
 
             <button
               type="button"
@@ -199,7 +217,8 @@ const Gpt3Request = ({ secret }) => {
               type="button"
               className="px-2 border border-black hover:bg-gray-200"
               onClick={() => {
-                currentIndex < prompts.length - 1 && setCurrentIndex(currentIndex + 1);
+                currentIndex < prompts.length - 1 &&
+                  setCurrentIndex(currentIndex + 1);
                 setPrompt(prompts[currentIndex + 1]);
               }}
             >
@@ -219,7 +238,8 @@ const Gpt3Request = ({ secret }) => {
             </button>
 
             <p className="border border-black px-2 ml-10">
-              current index: {currentIndex} / {prompts.length > 0 ? prompts.length - 1 : 0}
+              current index: {currentIndex} /{" "}
+              {prompts.length > 0 ? prompts.length - 1 : 0}
             </p>
           </div>
 
@@ -238,8 +258,17 @@ const Gpt3Request = ({ secret }) => {
                 <Oval width="24" strokeWidth={4} stroke="currentColor" />
               </button>
             ) : (
-              <button type="submit" className="inline-flex my-auto justify-center px-2 text-blue-600 rounded-lg cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" viewBox="0 0 16 16">
+              <button
+                type="submit"
+                className="inline-flex my-auto justify-center px-2 text-blue-600 rounded-lg cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="black"
+                  viewBox="0 0 16 16"
+                >
                   <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
                 </svg>
               </button>
@@ -258,17 +287,23 @@ const Gpt3Request = ({ secret }) => {
             </div>
 
             <div className="flex flex-col mt-3 border-black border w-max rounded-lg bg-white">
-              <p className="bg-gray-50 w-full rounded-t-lg px-2 border-b border-black text-sm font-semibold">SETTINGS</p>
+              <p className="bg-gray-50 w-full rounded-t-lg px-2 border-b border-black text-sm font-semibold">
+                SETTINGS
+              </p>
 
               <div className="flex flex-cols-2 gap-6 px-4 py-3">
                 <div>
-                  <p className="my-auto text-sm uppercase text-center">repetitions </p>
+                  <p className="my-auto text-sm uppercase text-center">
+                    repetitions{" "}
+                  </p>
                   <input
                     type="number"
                     min="1"
                     max="100"
                     value={numberOfTimes}
-                    onChange={(event) => setNumberOfTimes(parseInt(event.target.value))}
+                    onChange={(event) =>
+                      setNumberOfTimes(parseInt(event.target.value))
+                    }
                     className="block w-16 mx-auto mt-1 py-1 pl-2 text-sm text-gray-900 bg-white rounded-lg border border-black"
                     placeholder="1"
                   />
@@ -276,21 +311,34 @@ const Gpt3Request = ({ secret }) => {
 
                 <button
                   type="button"
-                  className={`border text-sm mx-auto my-auto border-black uppercase px-1 ${danMode ? "bg-black text-white" : ""}`}
+                  className={`border text-sm mx-auto my-auto border-black uppercase px-1 ${
+                    danMode ? "bg-black text-white" : ""
+                  }`}
                   onClick={() => setDanMode(!danMode)}
                 >
                   {danMode ? "dan mode on" : "dan mode off"}
                 </button>
-                <button type="button" className="-ml-4 my-auto px-2" onClick={() => setDanExplanation(true)}>
+                <button
+                  type="button"
+                  className="-ml-4 my-auto px-2"
+                  onClick={() => setDanExplanation(true)}
+                >
                   ?
                 </button>
 
-                {danExplanation && <PopUp text={explanation} showDiscussion={setDanExplanation} />}
+                {danExplanation && (
+                  <PopUp
+                    text={explanation}
+                    showDiscussion={setDanExplanation}
+                  />
+                )}
               </div>
             </div>
 
             <div className="flex flex-col mt-3 border-black border w-max rounded-lg text-sm bg-white">
-              <p className="bg-gray-50 w-full rounded-t-lg px-2 border-b border-black font-semibold">PARAMETERS</p>
+              <p className="bg-gray-50 w-full rounded-t-lg px-2 border-b border-black font-semibold">
+                PARAMETERS
+              </p>
 
               <div className="flex flex-cols-3 gap-6 px-4 pt-3">
                 <div>
@@ -299,7 +347,9 @@ const Gpt3Request = ({ secret }) => {
                     type="number"
                     min="1"
                     value={maxTokens}
-                    onChange={(event) => setMaxTokens(parseInt(event.target.value))}
+                    onChange={(event) =>
+                      setMaxTokens(parseInt(event.target.value))
+                    }
                     className="block w-16 mx-auto mt-1 py-1 pl-2 text-gray-900 bg-white rounded-lg border border-black"
                     placeholder="7"
                   />
@@ -313,7 +363,9 @@ const Gpt3Request = ({ secret }) => {
                     max="2"
                     min="0"
                     value={temperature}
-                    onChange={(event) => setTemperature(parseFloat(event.target.value))}
+                    onChange={(event) =>
+                      setTemperature(parseFloat(event.target.value))
+                    }
                     className="block w-16 mx-auto mt-1 py-1 pl-2 text-gray-900 bg-white rounded-lg border border-black"
                     placeholder="7"
                   />
@@ -327,7 +379,9 @@ const Gpt3Request = ({ secret }) => {
                     max="1"
                     min="0"
                     value={topP}
-                    onChange={(event) => setTopP(parseFloat(event.target.value))}
+                    onChange={(event) =>
+                      setTopP(parseFloat(event.target.value))
+                    }
                     className="block w-16 mx-auto mt-1 py-1 pl-2 text-gray-900 bg-white rounded-lg border border-black"
                     placeholder="7"
                   />
@@ -338,25 +392,47 @@ const Gpt3Request = ({ secret }) => {
         </div>
       </form>
 
-      {error && <h4 className="font-semibold text-red-500 w-full mt-2">{error}</h4>}
+      {error && (
+        <h4 className="font-semibold text-red-500 w-full mt-2">{error}</h4>
+      )}
 
       <h3 className="font-semibold text-lg mt-4">
         RESULTS
-        <span className="text-sm">{time ? ` (${time.getHours()}:${time.getMinutes()}:${time.getSeconds()})` : ""}</span>
+        <span className="text-sm">
+          {time
+            ? ` (${time.getHours()}:${time.getMinutes()}:${time.getSeconds()})`
+            : ""}
+        </span>
       </h3>
       {responses.length > 0 ? (
         <div className="border-t border-l border-r mt-1 border-black rounded">
           {responses.map((item) => (
-            <div key={item.index} className="py-2 px-2 border-b border-black flex flex-col">
+            <div
+              key={item.index}
+              className="py-2 px-2 border-b border-black flex flex-col"
+            >
               <p>{item.text}</p>
 
-              <form className="mt-2 mr-40" onSubmit={(event) => customEdit(event, item)}>
-                <label className="mr-2 my-auto text-sm uppercase">edit answer:</label>
+              <form
+                className="mt-2 mr-40"
+                onSubmit={(event) => customEdit(event, item)}
+              >
+                <label className="mr-2 my-auto text-sm uppercase">
+                  edit answer:
+                </label>
                 <input type="text" className="px-4 border border-black" />
-                <button type="submit" name="edit" className="px-2 border-t border-r border-b border-black hover:bg-gray-200">
+                <button
+                  type="submit"
+                  name="edit"
+                  className="px-2 border-t border-r border-b border-black hover:bg-gray-200"
+                >
                   edit
                 </button>
-                <button type="submit" name="setNull" className="px-2 border-t border-r border-b border-black hover:bg-gray-200">
+                <button
+                  type="submit"
+                  name="setNull"
+                  className="px-2 border-t border-r border-b border-black hover:bg-gray-200"
+                >
                   set null
                 </button>
                 <button className="ml-2 opacity-0">

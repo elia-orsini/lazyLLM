@@ -35,7 +35,6 @@ const EvalsList = () => {
     <div className="w-10/12 mx-auto h-screen">
       <Title
         includeDefaultLinks={false}
-        title="lazyLLM"
         links={[{ text: "home", action: "/" }]}
       />
 
@@ -43,7 +42,7 @@ const EvalsList = () => {
         <div
           className="bg-white h-full"
           style={{
-            backgroundImage: `url('dalle6.png')`,
+            backgroundImage: `url('dalle7.png')`,
             backgroundSize: "cover",
             backgroundPositionY: "13%",
             // textShadow:

@@ -1,10 +1,8 @@
-export default function PromptPreview({
-  title,
-  link,
-  bgImage,
-  title2 = "",
-  title3 = "",
-}) {
+import { useState } from "react";
+
+export default function PromptPreview({ title, link, bgImage1, bgImage2 }) {
+  const [bgImage, setBgImage] = useState(bgImage1);
+
   return (
     <a href={link}>
       <div className="flex h-full">
@@ -16,7 +14,18 @@ export default function PromptPreview({
                 pointerEvents: "none",
               }}
             >
-              <svg width="100%" height="100%">
+              <div className="flex h-full w-full">
+                <p
+                  className="mx-auto my-auto font-bold text-white text-5xl text-center"
+                  style={{
+                    textShadow:
+                      "-0.7px -0.7px 0 #000, 0.7px -0.7px 0 #000, -0.7px 0.7px 0 #000, 0.7px 0.7px 0 #000",
+                  }}
+                >
+                  {title}
+                </p>
+              </div>
+              {/* <svg width="100%" height="100%">
                 <text
                   x="50%"
                   y="50%"
@@ -40,14 +49,16 @@ export default function PromptPreview({
                     {title3 && title3}
                   </tspan>
                 </text>
-              </svg>
+              </svg> */}
             </div>
             <div
-              className="absolute inset-0 z-0 transition duration-300 ease-in-out transform scale-100 hover:scale-105"
+              className="absolute inset-0 z-0 transition-all duration-500 ease-in-out transform scale-100 hover:scale-105"
               style={{
                 backgroundImage: `url('${bgImage}')`,
                 backgroundSize: "cover",
               }}
+              onMouseEnter={() => setBgImage(bgImage2)}
+              onMouseOut={() => setBgImage(bgImage1)}
             ></div>
           </div>
         </div>

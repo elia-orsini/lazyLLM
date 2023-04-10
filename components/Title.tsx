@@ -1,17 +1,16 @@
 import Link from "next/link";
 
-export default function Title({
-  links = [],
-  includeDefaultLinks = true,
-  title = "prompts for cognitive biases",
-}) {
+export default function Title({ links = [], includeDefaultLinks = true }) {
   return (
     <div className="w-full flex mt-4 text-center border-b border-black pb-3">
       <div className="w-full grid grid-cols-2">
         <div className="text-left">
-          <h1 className="inline font-semibold text-xl lowercase tracking-wide">
-            {title}
-          </h1>
+          <Link href="/" passHref>
+            <h1 className="inline font-semibold text-xl tracking-wide font-black cursor-pointer">
+              <img src="/lazyLLMlogo.png" className="w-6 inline mr-1 pb-1.5" />
+              lazyLLM
+            </h1>
+          </Link>
         </div>
 
         {includeDefaultLinks && (

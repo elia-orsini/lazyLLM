@@ -11,7 +11,7 @@ export default function Item({ content, fullData }) {
   );
 
   return (
-    <a href={`prompts/${content.id}`}>
+    <a href={`cbprompts/${content.id}`}>
       <div className="text-xs h-full mx-auto border border-black rounded px-2 sm:w-80 w-72 hover:bg-gray-100 text-left">
         <p className="py-1 overflow-hidden">
           {content.prompt.slice(0, 130)}...
