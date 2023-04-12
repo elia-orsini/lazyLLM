@@ -93,7 +93,7 @@ const Gpt3Request = ({ secret }) => {
           max_tokens: maxTokens,
           n: numberOfTimes,
           temperature: temperature,
-          top_p: 1,
+          top_p: topP,
         },
         {
           headers: {
@@ -165,8 +165,6 @@ const Gpt3Request = ({ secret }) => {
       topP: topP,
       responses: responses,
     };
-
-    console.log(jsonFile);
 
     downloadJSON(
       jsonFile,
