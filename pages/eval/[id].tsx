@@ -47,7 +47,6 @@ export default function Eval({ items }) {
     <div>
       <div className="mx-auto w-10/12">
         <Title
-          title={id && id.slice(0, id.length - 5)}
           includeDefaultLinks={false}
           links={[
             { text: "import", action: `/chatgptbattleeval/${id}` },

@@ -1,10 +1,6 @@
 import Link from "next/link";
 
-export default function Footer({
-  links = [],
-  includeDefaultLinks = true,
-  title = "prompts for cognitive biases",
-}) {
+export default function Footer({}) {
   return (
     <div className="w-full flex text-center pb-3 pt-20 pb-10">
       <div className="w-full grid grid-cols-2">

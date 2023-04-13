@@ -109,7 +109,7 @@ const Gpt3Request = ({ secret }) => {
     setResponses(responsesArray);
   };
 
-  const qaNumber = async (type="number") => {
+  const qaNumber = async (type = "number") => {
     const promises = responses.map((r) => {
       const qaPrompt = [prompt[0]];
 
@@ -124,7 +124,7 @@ const Gpt3Request = ({ secret }) => {
       // github.com/openai/evals/blob/main/evals/elsuite/modelgraded/classify.py
       const magicQaPrompt = {
         role: "user",
-        content: type==="number" ? parseNumber : parseText,
+        content: type === "number" ? parseNumber : parseText,
       };
 
       qaPrompt.push(magicQaPrompt);
@@ -200,7 +200,7 @@ const Gpt3Request = ({ secret }) => {
 
   return (
     <div className="mx-auto h-screen w-full px-10">
-      <Title includeDefaultLinks={false} title="chatGPT" />
+      <Title includeDefaultLinks={false} />
 
       <form className="w-full bg-gray-200 rounded-xl" onSubmit={handleSubmit}>
         <div className="grid items-center px-3 rounded-xl py-3 mt-5 border border-black">

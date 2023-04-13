@@ -40,7 +40,7 @@ const IndexPage = () => {
 
         {templateMode ? <TemplateMode /> : <FreeMode />}
 
-        <Footer title="lazyLLM" />
+        <Footer />
       </div>
     </>
   );
