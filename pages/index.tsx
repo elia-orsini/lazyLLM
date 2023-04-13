@@ -32,7 +32,7 @@ const Landing = () => {
         </div>
 
         <div className="grid sm:grid-cols-3 w-full">
-          <img className="w-80 ml-25 hidden sm:block" src="lazy2.png" />
+          <img className="w-60 ml-25 hidden sm:block" src="lazy2.svg" />
           <div className="flex flex-col pt-32 sm:pt-25">
             <Link href="/datasets">
               <button className="mx-auto bg-black text-white px-2 cursor-pointer">
