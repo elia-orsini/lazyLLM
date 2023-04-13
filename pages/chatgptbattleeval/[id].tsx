@@ -225,7 +225,6 @@ const Gpt3Request = ({ secret }) => {
     <div className="mx-auto h-screen w-full px-10">
       <Title
         includeDefaultLinks={false}
-        title="chatGPT"
         links={[{ text: "evals", action: "/evalslist" }]}
       />
 
