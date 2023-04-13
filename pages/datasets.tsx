@@ -36,7 +36,7 @@ const IndexPage = () => {
           />
         </div>
 
-        <Footer title="lazyLLM" />
+        <Footer />
       </div>
     </>
   );
