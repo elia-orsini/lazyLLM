@@ -33,9 +33,9 @@ const Landing = () => {
 
         <div className="grid sm:grid-cols-3 w-full">
           <img className="w-60 ml-25 hidden sm:block" src="lazy2.svg" />
-          <div className="flex flex-col pt-32 sm:pt-25">
+          <div className="flex flex-col pt-32 sm:pt-25 cursor-pointer">
             <Link href="/datasets">
-              <button className="mx-auto bg-black text-white px-2 cursor-pointer">
+              <button className="mx-auto bg-black text-white px-2">
                 ENTER
               </button>
             </Link>
@@ -46,12 +46,12 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="flex h-screen bg-gray-300">
+      <div className="flex h-screen bg-gray-300 border-t-2 border-b-2 border-black ">
         <div className="w-full my-auto my-auto">
           <div className="sm:flex sm:w-max mx-auto">
             <img
-              src="lazy3.png"
-              className="w-40 sm:w-80 mx-auto pl-10 sm:ml-0 pl-0"
+              src="lazy3.svg"
+              className="w-40 sm:w-52 sm:mr-20 mx-auto pl-10 sm:ml-0 pr-4 sm:pl-0"
             />
             <div className="my-auto text-center sm:text-left">
               <h1 className="font-bold text-2xl sm:text-3xl">
@@ -79,23 +79,29 @@ const Landing = () => {
               </p>
             </div>
             <img
-              src="lazy4.png"
+              src="lazy4.svg"
               className="w-40 mt-4 sm:mt-0 sm:w-80 mx-auto sm:ml-0"
             />
           </div>
         </div>
       </div>
 
-      <div className="flex bg-white h-screen">
-        <div className="mx-auto my-auto grid grid-cols-2 w-3/4">
+      <div className="flex bg-white h-screen border-b-2 border-black">
+        <div className="mx-auto my-auto grid sm:grid-cols-2 pt-10 sm:py-0 w-3/4">
           <img
             src="table.svg"
             width={400}
             className="col-span-1 mx-auto my-auto"
           />
           <div className="grid grid-rows-2">
-            <img src="table2.svg" className="mx-auto my-auto w-60" />
-            <img src="table3.svg" className="mx-auto my-auto w-60" />
+            <img
+              src="table2.svg"
+              className="mx-auto my-auto w-60 sm:block hidden"
+            />
+            <img
+              src="lazy5.svg"
+              className="mx-auto my-auto w-44 pt-10 sm:pt-0"
+            />
           </div>
         </div>
       </div>
