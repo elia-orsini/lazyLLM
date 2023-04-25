@@ -16,7 +16,7 @@ const Gpt3Request = ({ secret }) => {
 
   const [maxTokens, setMaxTokens] = useState<number>(50);
   const [temperature, setTemperature] = useState<number>(1);
-  const [topP, setTopP] = useState<number>(0.1);
+  const [topP, setTopP] = useState<number>(1);
 
   const [prompts, setPrompts] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -120,6 +120,7 @@ const Gpt3Request = ({ secret }) => {
       })
       .catch((response) => {
         setError(response.response.data.error.message);
+        setLoading(false);
       });
 
     setResponses(responses);
