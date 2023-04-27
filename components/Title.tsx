@@ -20,11 +20,6 @@ export default function Title({ links = [], includeDefaultLinks = true }) {
                 chatGPTBattle
               </button>
             </Link>
-            <Link href="/chatgpt" passHref>
-              <button className="uppercase text-sm mt-2 my-auto font-semibold hover:bg-gray-200 px-1">
-                chatGPT
-              </button>
-            </Link>
           </div>
         )}
 

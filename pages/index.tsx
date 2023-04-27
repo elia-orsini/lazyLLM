@@ -46,7 +46,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="flex h-screen bg-gray-300 border-t-2 border-b-2 border-black ">
+      <div className="flex h-screen bg-secondary border-t-2 border-b-2 border-black ">
         <div className="w-full my-auto my-auto">
           <div className="sm:flex sm:w-max mx-auto">
             <img
@@ -106,7 +106,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="flex bg-gray-300 pb-10 px-10">
+      <div className="flex bg-secondary pb-10 px-10">
         <Footer />
       </div>
     </>

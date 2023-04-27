@@ -12,6 +12,9 @@ module.exports = {
         50: "50%",
         75: "75%",
       },
+      colors: {
+        secondary: "#ebebeb",
+      },
       padding: {
         25: "25%",
         50: "50%",

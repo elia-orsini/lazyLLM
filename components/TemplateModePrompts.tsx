@@ -116,43 +116,41 @@ export default function TemplateMode() {
         className="border rounded border-black w-full px-2 py-2 font-semibold text-sm"
       ></textarea>
 
-      {variables.length > 0 && (
-        <>
-          <form
-            onSubmit={(e) => {
-              addToDataset(e);
-            }}
-          >
-            <p className="uppercase font-bold text-xs mt-2">VARIABLES</p>
+      <form
+        onSubmit={(e) => {
+          addToDataset(e);
+        }}
+      >
+        <p className="uppercase font-bold text-xs mt-2">VARIABLES</p>
 
-            <div className="border border-black rounded px-2 py-1">
-              {variables.map((variable, i) => {
-                return (
-                  <div key={i} className="grid grid-cols-3 w-6/12">
-                    <div className="inline my-auto">{`${variable}: `}</div>
-                    <input
-                      className="border px-2 col-span-2 border-black my-1 w-full"
-                      type="text"
-                      name={variable}
-                    />
-                  </div>
-                );
-              })}
-            </div>
+        {variables.length > 0 && (    
+          <div className="border border-black rounded px-2 py-1">
+            {variables.map((variable, i) => {
+              return (
+                <div key={i} className="grid grid-cols-3 w-6/12">
+                  <div className="inline my-auto">{`${variable}: `}</div>
+                  <input
+                    className="border px-2 col-span-2 border-black my-1 w-full"
+                    type="text"
+                    name={variable}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        )}
 
-            <div className="mt-8">
-              <span className="uppercase font-bold text-xs">ideal output</span>
-              <input
-                className="border border-black mx-2"
-                type="text"
-                name="ideal"
-              />
-            </div>
+        <div className="mt-8">
+          <span className="uppercase font-bold text-xs">ideal output</span>
+          <input
+            className="border border-black mx-2"
+            type="text"
+            name="ideal"
+          />
+        </div>
 
-            <button className="bg-black text-white px-2 mt-4">add</button>
-          </form>
-        </>
-      )}
+        <button className="bg-black text-white px-2 mt-4">add</button>
+      </form>
     </div>
   );
 }
