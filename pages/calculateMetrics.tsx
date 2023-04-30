@@ -98,19 +98,19 @@ const IndexPage = () => {
                 className="px-2 mx-2 border border-black hover:bg-secondary"
                 onClick={() => setResult(calculateMean(first))}
               >
-                Mean
+                mean
               </button>
               <button
                 className="px-2 mx-2 border border-black hover:bg-secondary"
                 onClick={() => setResult(calculateStd(first))}
               >
-                Std
+                std dev
               </button>
               <button
                 className="px-2 mx-2 border border-black hover:bg-secondary"
                 onClick={() => setResult(calculateMedian(first))}
               >
-                Median
+                median
               </button>
             </div>
           )}
@@ -127,10 +127,21 @@ const IndexPage = () => {
                 className="px-2 mx-2 border border-black hover:bg-secondary"
                 onClick={() => setResult(calculateCohensD(first, second))}
               >
-                Cohen's D
+                cohen&apos;s d
               </button>
             </div>
           )}
+
+          <div className="mt-10 mx-auto">
+            <span className="">best match:</span>
+            <input className="border border-black ml-2 w-40 px-1" />
+            <button
+              className="px-2 border border-black bg-black text-white"
+              onClick={() => {}}
+            >
+              analyse
+            </button>
+          </div>
 
           {result && (
             <>

@@ -26,7 +26,7 @@ export default function TemplateMode() {
 
     const newDataset = [];
 
-    for (let i = 0; i < dataset.length; i++) {
+    for (let i = dataset.length - 1; i < dataset.length; i++) {
       const substitutedText = promptText.replace(tagRegex, (match) => {
         const tag = match.slice(1, -1);
 
@@ -39,7 +39,8 @@ export default function TemplateMode() {
 
       newDataset.push(substitutedText);
     }
-    setDataset(newDataset);
+
+    setDataset((dataset) => [...dataset, ...newDataset]);
   };
 
   const addToDataset = (e) => {
@@ -51,9 +52,9 @@ export default function TemplateMode() {
       values[variables[i]] = e.target[i].value;
     }
 
-    setDatasetValues((datasetValues) => [...datasetValues, values]);
+    setDatasetValues((datasetValues) => [...datasetValues, values]);    
 
-    setIdeals([...ideals, e.target[e.target.length - 2].value]);
+    setIdeals([...ideals, e.target[e.target.length - 3].value]);
 
     substituteWords([...datasetValues, values]);
 
@@ -84,22 +85,11 @@ export default function TemplateMode() {
       JSON.push(formattedPrompt);
     }
 
-    downloadJSON(JSON, "templateBasedPrompts_lazyLLM.json");
+    downloadJSON(JSON, "prompts_lazyLLM.json");
   };
 
   return (
     <div>
-      <div>
-        <button
-          className={`uppercase px-2 bg-black text-white text-xs`}
-          onClick={() => {
-            JSONDownload();
-          }}
-        >
-          download as json
-        </button>
-      </div>
-
       <p className="uppercase mt-10 font-bold text-xs">system prompt</p>
       <textarea
         onChange={(e) => {
@@ -121,23 +111,24 @@ export default function TemplateMode() {
           addToDataset(e);
         }}
       >
-        <p className="uppercase font-bold text-xs mt-2">VARIABLES</p>
-
-        {variables.length > 0 && (    
-          <div className="border border-black rounded px-2 py-1">
-            {variables.map((variable, i) => {
-              return (
-                <div key={i} className="grid grid-cols-3 w-6/12">
-                  <div className="inline my-auto">{`${variable}: `}</div>
-                  <input
-                    className="border px-2 col-span-2 border-black my-1 w-full"
-                    type="text"
-                    name={variable}
-                  />
-                </div>
-              );
-            })}
-          </div>
+        {variables.length > 0 && (
+          <>
+            <p className="uppercase font-bold text-xs mt-2">VARIABLES</p>
+            <div className="border border-black rounded px-2 py-1">
+              {variables.map((variable, i) => {
+                return (
+                  <div key={i} className="grid grid-cols-3 w-6/12">
+                    <div className="inline my-auto">{`${variable}: `}</div>
+                    <input
+                      className="border px-2 col-span-2 border-black my-1 w-full"
+                      type="text"
+                      name={variable}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </>
         )}
 
         <div className="mt-8">
@@ -149,7 +140,17 @@ export default function TemplateMode() {
           />
         </div>
 
-        <button className="bg-black text-white px-2 mt-4">add</button>
+        <div className="mt-10">
+          <button className="bg-black text-white px-2">add</button>
+          <button
+            onClick={() => {
+              JSONDownload();
+            }}
+            className="bg-black text-white px-2 ml-2"
+          >
+            download as json
+          </button>
+        </div>
       </form>
     </div>
   );
