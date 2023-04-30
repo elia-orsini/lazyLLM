@@ -38,23 +38,7 @@ function calculateChiSquare(contingencyTable) {
 //   const { p } = result;
 
 //   return p;
-// };
-
-// // cohens d
-// const calculateCohenD = (x, y) => {
-//   const nx = x.length;
-//   const ny = y.length;
-//   const dof = nx + ny - 2;
-//   const d =
-//     (math.mean(x) - math.mean(y)) /
-//     math.sqrt(
-//       ((nx - 1) * math.std(x, "uncorrected") ** 2 +
-//         (ny - 1) * math.std(y, "uncorrected") ** 2) /
-//         dof
-//     );
-
-//   return d;
-// };
+// };   
 
 function calculateCohensD(sample1, sample2) {
   const mean1 = calculateMean(sample1);

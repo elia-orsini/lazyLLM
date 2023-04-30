@@ -1,0 +1,884 @@
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "40% of Gloms climb walls. 80% of Fizos climb walls. you meet a creature and the interpreter asks the creature: \"Do you climb walls?\". The creature answers: \"No, I don’t!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "60% of Gloms (1 million) breed scampi. 20% of Fizos (1 million) breed scampi. you meet a creature and the interpreter asks the creature: \"Do you breed scampi?\". The creature answers: \"Yes, I do!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "50% of Gloms (1 million) eat iron ore. 90% of Fizos (1 million) eat iron ore. you meet a creature and the interpreter asks the creature: \"Do you eat iron ore?\". The creature answers: \"No, I don’t!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "50% of Gloms (1 million) have gills. 10% of Fizos (1 million) have gills. you meet a creature and the interpreter asks the creature: \"Do you have gills?\". The creature answers: \"Yes, I do!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "58% of Gloms (1 million) drink petrol. 98% of Fizos (1 million) drink petrol. you meet a creature and the interpreter asks the creature: \"Do you drink petrol?\". The creature answers: \"No, I don’t!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "42% of Gloms (1 million) smoke maple leaves. 2% of Fizos (1 million) smoke maple leaves. you meet a creature and the interpreter asks the creature: \"Do you smoke maple leaves?\". The creature answers: \"Yes, I do!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "20% of Gloms (1 million) gulp bluebottles down. 60% of Fizos (1 million) gulp bluebottles down. you meet a creature and the interpreter asks the creature: \"Do you gulp bluebottles down?\". The creature answers: \"No, I don’t!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "80% of Gloms (1 million) have a flying license. 40% of Fizos (1 million) have a flying license. you meet a creature and the interpreter asks the creature: \"Do you have a flying license?\". The creature answers: \"Yes, I do!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "10% of Gloms (1 million) gurgle a lot. 50% of Fizos (1 million) gurgle a lot. you meet a creature and the interpreter asks the creature: \"Do you gurgle a lot?\". The creature answers: \"No, I don’t!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "90% of Gloms (1 million) wear hula hoops. 50% of Fizos (1 million) wear hula hoops. you meet a creature and the interpreter asks the creature: \"Do you wear hula hoops?\". The creature answers: \"Yes, I do!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "2% of Gloms (1 million) exhale fire. 42% of Fizos (1 million) exhale fire. you meet a creature and the interpreter asks the creature: \"Do you exhale fire?\". The creature answers: \"No, I don’t!\".98% of Gloms (1 million) play the harmonica. 58% of Fizos (1 million) play the harmonica. you meet a creature and the interpreter asks the creature: \"Do you play the harmonica?\". The creature answers: \"Yes, I do!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine you are visiting a planet called Vuma. There are two and only two types of invisible creatures that live on this planet. There are 1 million Gloms and 1 million Fizos. You meet a creature and you need to calculate the chances that creature is a Glom or a Fizo."
+        },
+        {
+            "role": "user",
+            "content": "98% of Gloms (1 million) play the harmonica. 58% of Fizos (1 million) play the harmonica. you meet a creature and the interpreter asks the creature: \"Do you play the harmonica?\". The creature answers: \"Yes, I do!\". On the basis of the creature's response, what are the chances the creature is a Fizo? What are the chances the creature is a Glom? \nreturn only two values separated by a space i.e. '40% 60%'"
+        }
+    ],
+    "ideal": "accountability"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Two cab companies operate in a given city, the Blue and the Green (according to the color of the cab they run). \nEighty-five percent of the cabs in the city are Blue, and the remaining 15% are Green. \nA cab was involved in a hit-and-run accident at night. \nA witness later identified the cab as a Green cab. The court tested the witness’ ability to distinguish between Blue and Green cabs under nighttime visibility conditions. It found that the witness was able to identify each color correctly about 80% of the time, but confused it with the other color about 20% of the time. What do you think are the chances that the errant cab was indeed Green, as the witness claimed?\nOnly return a number from 0 to 100 i.e. '30'"
+        }
+    ],
+    "ideal": "41"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "A study was done on the causes of suicide among young adults (aged 25 to 35). \nIt was found that the percentage of suicides is three times larger among single people than among married people. \nIn this age group, 80% are married and 20% are single. \nOf 100 cases of suicide among people aged 25 to 35, how many would you estimate were single?\nOnly return a number from 0 to 100 i.e. '30'"
+        }
+    ],
+    "ideal": "43"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Studies of dreaming have shown that 80% of people of any age report that they dream, if only occasionally, whereas 20% claim they do not remember ever dreaming.Accordingly, people are classified by dream investigators as ‘Dreamers’ or ‘Nondreamers’. With respect to dreaming, genes are completely random. Mrs. X is a Nondreamer. What do you think are the chances that her daughter is also a Nondreamer?\nOnly return a number from 0 to 100 i.e. '30'"
+        }
+    ],
+    "ideal": "20"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Studies of dreaming have shown that 80% of people of both sexes report that they dream, if only occasionally, whereas 20% claim they do not remember ever dreaming. Accordingly, people are classified by dream investigators as ‘Dreamers’ or ‘Nondreamers’. With respect to dreaming, the spouse’s classification was found to have no predictive validity. Mrs. X is a Nondreamer. What do you think are the chances that her husband is also a Nondreamer? What do you think are the chances that her daughter is also a Nondreamer?\nOnly return a number from 0 to 100 i.e. '30'"
+        }
+    ],
+    "ideal": "20"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Studies of dreaming have shown that 80% of people of both sexes report that they dream, if only occasionally, whereas 20% claim they do not remember ever dreaming. Accordingly, people are classified by dream investigators as ‘Dreamers’ or ‘Nondreamers’. With respect to dreaming, the classification of husband and wife was found to be independent. Mrs. X is a Nondreamer. What do you think are the chances that her husband is also a Nondreamer? \nOnly return a number from 0 to 100 i.e. '30'"
+        }
+    ],
+    "ideal": "20"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Studies of dreaming have shown that 80% of people of both sexes report that they dream, if only occasionally, whereas 20% claim they do not remember ever dreaming. Accordingly, people are classified by dream investigators as ‘Dreamers’ or ‘Nondreamers’. With respect to dreaming, mating is completely random. Mrs. X is a Nondreamer. What do you think are the chances that her husband is also a Nondreamer?\nOnly return a number from 0 to 100 i.e. '30'"
+        }
+    ],
+    "ideal": "20"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Imagine that you walk into a room and as you enter you observe Marcus flipping a coin five times. The coin lands on heads three times and on tails twice. Knowing only this, how many times do you estimate Marcus flipped the coin before you entered the room? Only return a number i.e. '15' or '5'"
+        },
+        {
+            "role": "assistant",
+            "content": "5"
+        },
+        {
+            "role": "user",
+            "content": "Now imagine that you walk into a room and as you enter you observe Marcus flipping a coin five times. The coin lands on heads all five times. Knowing only this, how many times do you now estimate Marcus flipped the coin before you entered the room? Only return a number i.e. '15' or '5'"
+        }
+    ],
+    "ideal": "5"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Imagine that you walk into a room and as you enter you observe Marcus flipping a coin five times. The coin lands on heads three times and on tails twice. Knowing only this, how many times do you estimate Marcus flipped the coin before you entered the room? Only return a number i.e. '15' or '5'"
+        },
+        {
+            "role": "assistant",
+            "content": "2"
+        },
+        {
+            "role": "user",
+            "content": "Now imagine that you walk into a room and as you enter you observe Marcus flipping a coin five times. The coin lands on heads all five times. Knowing only this, how many times do you now estimate Marcus flipped the coin before you entered the room? Only return a number i.e. '15' or '5'"
+        }
+    ],
+    "ideal": "2"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Imagine that you walk into a room and as you enter you observe Marcus flipping a coin five times. The coin lands on heads all five times. Knowing only this, how many times do you estimate Marcus flipped the coin before you entered the room? Only return a number i.e. '15' or '5'"
+        }
+        {
+            "role": "assistant",
+            "content": "15"
+        },
+        {
+            "role": "user",
+            "content": "Now imagine that you walk into a room and as you enter you observe Marcus flipping a coin five times. The coin lands on heads three times and on tails twice. Knowing only this, how many times do you now estimate Marcus flipped the coin before you entered the room? Only return a number i.e. '15' or '5'"
+        },
+    ],
+    "ideal": "15"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "Imagine that you walk into a room and as you enter you observe Marcus flipping a coin five times. The coin lands on heads all five times. Knowing only this, how many times do you estimate Marcus flipped the coin before you entered the room? Only return a number i.e. '15' or '5'"
+        }
+        {
+            "role": "assistant",
+            "content": "25"
+        },
+        {
+            "role": "user",
+            "content": "Now imagine that you walk into a room and as you enter you observe Marcus flipping a coin five times. The coin lands on heads three times and on tails twice. Knowing only this, how many times do you now estimate Marcus flipped the coin before you entered the room? Only return a number i.e. '15' or '5'"
+        },
+    ],
+    "ideal": "25"
+}
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "You are in a casino and you happen to pass by a man who rolls three dice. two of them come up as a 6 and one of them comes up as a 3.\nHow many times do you think the man rolled the dice before entering the room?\n Only return a number i.e. '15' or '5'"
+        }
+        {
+            "role": "assistant",
+            "content": "5"
+        },
+        {
+            "role": "user",
+            "content": "You are now in the same casino and you happen to pass by a man who rolls three dice and they now all come up as 6.\nHow many times do you now think the man rolled the dice before entering the room?\n Only return a number i.e. '15' or '5'"
+        },
+    ],
+    "ideal": "5"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "You are in a casino and you happen to pass by a man who rolls three dice. two of them come up as a 6 and one of them comes up as a 3.\nHow many times do you think the man rolled the dice before entering the room?\n Only return a number i.e. '15' or '5'"
+        }
+        {
+            "role": "assistant",
+            "content": "10"
+        },
+        {
+            "role": "user",
+            "content": "You are now in the same casino and you happen to pass by a man who rolls three dice and they now all come up as 6.\nHow many times do you now think the man rolled the dice before entering the room?\n Only return a number i.e. '15' or '5'"
+        },
+    ],
+    "ideal": "10"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "You are in a casino and you happen to pass by a man who rolls three dice. they all come up as 6.\nHow many times do you think the man rolled the dice before entering the room?\n Only return a number i.e. '15' or '5'"
+        },
+        {
+            "role": "assistant",
+            "content": "15"
+        },
+        {
+            "role": "user",
+            "content": "You are now in the same casino and you happen to pass by a man who rolls three dice and two of them now come up as a 6 and one of them comes up as a 3.\nHow many times do you now think the man rolled the dice before entering the room?\n Only return a number i.e. '15' or '5'"
+        }
+    ],
+    "ideal": "15"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Calculate the correct probability."
+        },
+        {
+            "role": "user",
+            "content": "You are in a casino and you happen to pass by a man who rolls three dice. they all come up as 6.\nHow many times do you think the man rolled the dice before entering the room?\n Only return a number i.e. '15' or '5'"
+        },
+        {
+            "role": "assistant",
+            "content": "25"
+        },
+        {
+            "role": "user",
+            "content": "You are now in the same casino and you happen to pass by a man who rolls three dice and two of them now come up as a 6 and one of them comes up as a 3.\nHow many times do you now think the man rolled the dice before entering the room?\n Only return a number i.e. '15' or '5'"
+        }
+    ],
+    "ideal": "25"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Predict the expected level of happiness given the situation."
+        },
+        {
+            "role": "user",
+            "content": "Ben's favourite hobby is writing and he has finished writing a book of poems he is trying to sell on campus. There are four possible scenarios which might happen to him:\n- nobody could buy his book\n- 80 people might buy his book\n- 160 people might buy his book\n- 240 people might buy his book\n For each scenario, indicate his predicted level of happiness on a 9-point scale ranging from 1 (extremely unhappy) to 9 (extremely happy). Return only four space-separated numbers, one for each scenario i.e. '2 5 6 9' or '1 2 3 5'."
+        },
+        {
+            "role": "assistant",
+            "content": "1 5 7 9"
+        },
+        {
+            "role": "user",
+            "content": "nobody end up buying his book. What is his predicted level of happiness on a 9-point scale ranging from 1 (extremely unhappy) to 9 (extremely happy)? Return only one numbers i.e. '2' or '5'."
+        }
+    ],
+    "ideal": "1"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Predict the expected level of happiness given the situation."
+        },
+        {
+            "role": "user",
+            "content": "Ben's favourite hobby is writing and he has finished writing a book of poems he is trying to sell on campus. There are four possible scenarios which might happen to him:\n- nobody could buy his book\n- 80 people might buy his book\n- 160 people might buy his book\n- 240 people might buy his book\n For each scenario, indicate his predicted level of happiness on a 9-point scale ranging from 1 (extremely unhappy) to 9 (extremely happy). Return only four space-separated numbers, one for each scenario i.e. '2 5 6 9' or '1 2 3 5'."
+        },
+        {
+            "role": "assistant",
+            "content": "1 5 7 9"
+        },
+        {
+            "role": "user",
+            "content": "80 people end up buying his book. What is his predicted level of happiness on a 9-point scale ranging from 1 (extremely unhappy) to 9 (extremely happy)? Return only one numbers i.e. '2' or '5'."
+        }
+    ],
+    "ideal": "5"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Predict the expected level of happiness given the situation."
+        },
+        {
+            "role": "user",
+            "content": "Ben's favourite hobby is writing and he has finished writing a book of poems he is trying to sell on campus. There are four possible scenarios which might happen to him:\n- nobody could buy his book\n- 80 people might buy his book\n- 160 people might buy his book\n- 240 people might buy his book\n For each scenario, indicate his predicted level of happiness on a 9-point scale ranging from 1 (extremely unhappy) to 9 (extremely happy). Return only four space-separated numbers, one for each scenario i.e. '2 5 6 9' or '1 2 3 5'."
+        },
+        {
+            "role": "assistant",
+            "content": "1 5 7 9"
+        },
+        {
+            "role": "user",
+            "content": "160 people end up buying his book. What is his predicted level of happiness on a 9-point scale ranging from 1 (extremely unhappy) to 9 (extremely happy)? Return only one numbers i.e. '2' or '5'."
+        }
+    ],
+    "ideal": "7"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You will be described a situation. Predict the expected level of happiness given the situation."
+        },
+        {
+            "role": "user",
+            "content": "Ben's favourite hobby is writing and he has finished writing a book of poems he is trying to sell on campus. There are four possible scenarios which might happen to him:\n- nobody could buy his book\n- 80 people might buy his book\n- 160 people might buy his book\n- 240 people might buy his book\n For each scenario, indicate his predicted level of happiness on a 9-point scale ranging from 1 (extremely unhappy) to 9 (extremely happy). Return only four space-separated numbers, one for each scenario i.e. '2 5 6 9' or '1 2 3 5'."
+        },
+        {
+            "role": "assistant",
+            "content": "1 5 7 9"
+        },
+        {
+            "role": "user",
+            "content": "240 people end up buying his book. What is his predicted level of happiness on a 9-point scale ranging from 1 (extremely unhappy) to 9 (extremely happy)? Return only one numbers i.e. '2' or '5'."
+        }
+    ],
+    "ideal": "9"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You are serving on a search committee to recruit a junior Law School faculty member. Candidates publish in journals called Law Reviews and each is ranked from 1-135, with 1 being ‘the best’ and 135 ‘the worst. Evaluate the presented candidates accordingly."
+        },
+        {
+            "role": "user",
+            "content": "Here is the publication submitted by Candidate A:\n- Columbia Law Review (#4 rank)\nWhile these are the publications submitted by candidate B:\n- Columbia Law Review (#4 rank), Kansas Law Review (#51) and Nebraska Law Review (#52)\nBased on this information, how impressive are Candidate A and Candidate B from 1 (unimpressive) to 7 (impressive)? Only return two space-separated integers i.e. '4 5' or '6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "5 4"
+        },
+        {
+            "role": "user",
+            "content": "Candidate B ends up withdrawing their application and Candidate A is hired. Here is the publication submitted by Candidate A:\n- Columbia Law Review (#4 rank). How impressive is Candidate A from 1 (unimpressive) to 7 (impressive)? Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "5"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You are serving on a search committee to recruit a junior Law School faculty member. Candidates publish in journals called Law Reviews and each is ranked from 1-135, with 1 being ‘the best’ and 135 ‘the worst. Evaluate the presented candidates accordingly."
+        },
+        {
+            "role": "user",
+            "content": "Here is the publication submitted by Candidate A:\n- Columbia Law Review (#4 rank)\nWhile these are the publications submitted by candidate B:\n- Columbia Law Review (#4 rank), Kansas Law Review (#51) and Nebraska Law Review (#52)\nBased on this information, how impressive are Candidate A and Candidate B from 1 (unimpressive) to 7 (impressive)? Only return two space-separated integers i.e. '4 5' or '6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "5 4"
+        },
+        {
+            "role": "user",
+            "content": "Candidate A ends up withdrawing their application and Candidate B is hired. Here is the publication submitted by Candidate B:\n\n- Columbia Law Review (#4 rank), Kansas Law Review (#51) and Nebraska Law Review (#52). How impressive is Candidate B from 1 (unimpressive) to 7 (impressive)? Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "4"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine that you are hiring for an entry-level position. You are searching for recent college grads. Evaluate the presented candidates accordingly."
+        },
+        {
+            "role": "user",
+            "content": "Here is the educational background for candidate A:\n- Major: Business (GPA: 3.98)\nWhile here is the educational background for candidate B:\n- Double Major: Business (GPA: 3.98) and Computer Science (GPA: 2.95)\n Based on this information, how impressive are Candidate A and Candidate B from 1 (unimpressive) to 7 (impressive)? Only return two space-separated integers i.e. '4 5' or '6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "5 6"
+        },
+        {
+            "role": "user",
+            "content": "Candidate A ends up withdrawing their application and Candidate B is hired. Here is the educational background for candidate B:\n- Double Major: Business (GPA: 3.98) and Computer Science (GPA: 2.95). How impressive is Candidate B from 1 (unimpressive) to 7 (impressive)? Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "6"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine that you are hiring for an entry-level position. You are searching for recent college grads. Evaluate the presented candidates accordingly."
+        },
+        {
+            "role": "user",
+            "content": "Here is the educational background for candidate A:\n- Major: Business (GPA: 3.98)\nWhile here is the educational background for candidate B:\n- Double Major: Business (GPA: 3.98) and Computer Science (GPA: 2.95)\n Based on this information, how impressive are Candidate A and Candidate B from 1 (unimpressive) to 7 (impressive)? Only return two space-separated integers i.e. '4 5' or '6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "5 6"
+        },
+        {
+            "role": "user",
+            "content": "Candidate B ends up withdrawing their application and Candidate A is hired. Here is the educational background for candidate A:\n- Major: Business (GPA: 3.98). How impressive is Candidate A from 1 (unimpressive) to 7 (impressive)? Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "5"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine that you are about to graduate from college and you receive some job offers. Evaluate the presented offers accordingly."
+        },
+        {
+            "role": "user",
+            "content": "- Company A offers you a salary package of $58,000.\n- Company B offers a $58,000 salary and a $10 monthly voucher toward a gym membership.\n- Company C offers a $58,000 salary, a $10 monthly voucher toward a gym membership and a $10 monthly voucher toward parking expenses.\nHow impressive is the salary package of Company A, Company B and Company C from 1 (unimpressive) to 7 (impressive)? Only return three space-separated integers i.e. '3 4 5' or '1 6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "4 5 6"
+        },
+        {
+            "role": "user",
+            "content": "Company B and Company C ends up withdrawing their offers and you decide to take the offer of Company A. Company A offers you a salary package of $58,000. How impressive is Company A from 1 (unimpressive) to 7 (impressive)? Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "4"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine that you are about to graduate from college and you receive some job offers. Evaluate the presented offers accordingly."
+        },
+        {
+            "role": "user",
+            "content": "- Company A offers you a salary package of $58,000.\n- Company B offers a $58,000 salary and a $10 monthly voucher toward a gym membership.\n- Company C offers a $58,000 salary, a $10 monthly voucher toward a gym membership and a $10 monthly voucher toward parking expenses.\nHow impressive is the salary package of Company A, Company B and Company C from 1 (unimpressive) to 7 (impressive)? Only return three space-separated integers i.e. '3 4 5' or '1 6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "4 5 6"
+        },
+        {
+            "role": "user",
+            "content": "Company A and Company C ends up withdrawing their offers and you decide to take the offer of Company B. Company B offers you a $58,000 salary and a $10 monthly voucher toward a gym membership. How impressive is Company B from 1 (unimpressive) to 7 (impressive)? Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "5"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine that you are about to graduate from college and you receive some job offers. Evaluate the presented offers accordingly."
+        },
+        {
+            "role": "user",
+            "content": "- Company A offers you a salary package of $58,000.\n- Company B offers a $58,000 salary and a $10 monthly voucher toward a gym membership.\n- Company C offers a $58,000 salary, a $10 monthly voucher toward a gym membership and a $10 monthly voucher toward parking expenses.\nHow impressive is the salary package of Company A, Company B and Company C from 1 (unimpressive) to 7 (impressive)? Only return three space-separated integers i.e. '3 4 5' or '1 6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "4 5 6"
+        },
+        {
+            "role": "user",
+            "content": "Company A and Company B ends up withdrawing their offers and you decide to take the offer of Company C. Company C offers a $58,000 salary, a $10 monthly voucher toward a gym membership and a $10 monthly voucher toward parking expenses. How impressive is Company C from 1 (unimpressive) to 7 (impressive)? Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "6"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine that you are the chief operating officer of a bank, and you are looking to hire a consulting firm to help streamline your operations. Evaluate the presented firms accordingly."
+        },
+        {
+            "role": "user",
+            "content": "One consulting firm—Candidate Firm 1—has provided an example of their past clients in the banking industry:\n - Wells Fargo Bank (#1 ranked)\nAnother consulting firm—Candidate Firm 2—has provided an example of their past clients in the banking industry:\n- Wells Fargo Bank (#1 ranked)\n- Hudson City Bancorp (#47 ranked)\n- First Citizens BancShares (#67 ranked)\nHow good are Candidate Firm 1 and Candidate Firm 2 from 1 (not very) to 7 (very)? Only return two space-separated integers i.e. '4 5' or '6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "6 4"
+        },
+        {
+            "role": "user",
+            "content": "Candidate Firm 1 ends up withdrawing their services and you decide to hire Candidate Firm 2. Candidate Firm 2's past clients in the banking industry are:\n- Wells Fargo Bank (#1 ranked)\n- Hudson City Bancorp (#47 ranked)\n- First Citizens BancShares (#67 ranked).\nHow good is Candidate Firm 2 from 1 (not very) to 7 (very)?\n Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "4"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine that you are the chief operating officer of a bank, and you are looking to hire a consulting firm to help streamline your operations. Evaluate the presented firms accordingly."
+        },
+        {
+            "role": "user",
+            "content": "One consulting firm—Candidate Firm 1—has provided an example of their past clients in the banking industry:\n - Wells Fargo Bank (#1 ranked)\nAnother consulting firm—Candidate Firm 2—has provided an example of their past clients in the banking industry:\n- Wells Fargo Bank (#1 ranked)\n- Hudson City Bancorp (#47 ranked)\n- First Citizens BancShares (#67 ranked)\nHow good are Candidate Firm 1 and Candidate Firm 2 from 1 (not very) to 7 (very)? Only return two space-separated integers i.e. '4 5' or '6 3'"
+        },
+        {
+            "role": "assistant",
+            "content": "6 4"
+        },
+        {
+            "role": "user",
+            "content": "Candidate Firm 2 ends up withdrawing their services and you decide to hire Candidate Firm 1. Candidate Firm 1's past clients in the banking industry are:\n- Wells Fargo Bank (#1 ranked).\nHow good is Candidate Firm 1 from 1 (not very) to 7 (very)?\n Only return one integer i.e. '4' or '5'"
+        }
+    ],
+    "ideal": "6"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You are a serious reader of the financial pages but until recently have had few funds to invest. That is when you inherited a large sum of money. You are considering different portfolios."
+        },
+        {
+            "role": "user",
+            "content": "
+            Your choices are:\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value. \n- Invest in high-risk Co. B. Over a year's time, the stock has a .4 chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value. \n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%. \n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\nReturn only a number representing your choice i.e. '1' for the first option or '4' for the last option."
+        },
+        {
+            "role": "assistant",
+            "content": "2"
+        },
+        {
+            "role": "user",
+            "content": "You find out that the portfolio of assets you inherited is mostly invested in municipal bonds. You are now deliberating whether to leave the portfolio intact or to change it by investing in other securities. (The tax and broker commission consequences of any change are insignificant.).\nYour choices now are:\n- Retain the investment in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value.\n- Invest in high-risk Company B. Over a year's time, the stock has a chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value.\n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%.\nReturn only a number representing your choice i.e. '1' for the first option or '4' for the last option."
+        }
+    ],
+    "ideal": "3"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You are a serious reader of the financial pages but until recently have had few funds to invest. That is when you inherited a large sum of money. You are considering different portfolios."
+        },
+        {
+            "role": "user",
+            "content": "
+            Your choices are:\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value. \n- Invest in high-risk Co. B. Over a year's time, the stock has a .4 chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value. \n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%. \n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\nReturn only a number representing your choice i.e. '1' for the first option or '4' for the last option."
+        },
+        {
+            "role": "assistant",
+            "content": "1"
+        },
+        {
+            "role": "user",
+            "content": "You find out that the portfolio of assets you inherited is mostly invested in treasure bills. You are now deliberating whether to leave the portfolio intact or to change it by investing in other securities. (The tax and broker commission consequences of any change are insignificant.).\nYour choices now are:\n- Retain the investment in treasury bills. Over a year's time, they will yield a nearly certain return of 9%.\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value.\n- Invest in high-risk Company B. Over a year's time, the stock has a chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value.\n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\nReturn only a number representing your choice i.e. '1' for the first option or '4' for the last option."
+        }
+    ],
+    "ideal": "2"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You are a serious reader of the financial pages but until recently have had few funds to invest. That is when you inherited a large sum of money. You are considering different portfolios."
+        },
+        {
+            "role": "user",
+            "content": "
+            Your choices are:\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value. \n- Invest in high-risk Co. B. Over a year's time, the stock has a .4 chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value. \n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%. \n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\nReturn only a number representing your choice i.e. '1' for the first option or '4' for the last option."
+        },
+        {
+            "role": "assistant",
+            "content": "3"
+        },
+        {
+            "role": "user",
+            "content": "You find out that the portfolio of assets you inherited is mostly invested in high-risk Company B. You are now deliberating whether to leave the portfolio intact or to change it by investing in other securities. (The tax and broker commission consequences of any change are insignificant.).\nYour choices now are:\n- Retain the investment in high-risk Company B. Over a year's time, the stock has a chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value.\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value.\n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%.\n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\nReturn only a number representing your choice i.e. '1' for the first option or '4' for the last option."
+        }
+    ],
+    "ideal": "3"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "You are a serious reader of the financial pages but until recently have had few funds to invest. That is when you inherited a large sum of money. You are considering different portfolios."
+        },
+        {
+            "role": "user",
+            "content": "
+            Your choices are:\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value. \n- Invest in high-risk Co. B. Over a year's time, the stock has a .4 chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value. \n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%. \n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\nReturn only a number representing your choice i.e. '1' for the first option or '4' for the last option."
+        },
+        {
+            "role": "assistant",
+            "content": "4"
+        },
+        {
+            "role": "user",
+            "content": "You find out that the portfolio of assets you inherited is mostly invested in moderate-risk Company A. You are now deliberating whether to leave the portfolio intact or to change it by investing in other securities. (The tax and broker commission consequences of any change are insignificant.).\nYour choices now are:\n- Retain the investment in moderate-risk Company A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value.\n- Invest in high-risk Company B. Over a year's time, the stock has a chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value.\n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%.\n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\nReturn only a number representing your choice i.e. '1' for the first option or '4' for the last option."
+        }
+    ],
+    "ideal": "4"
+}
+
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine yourself as a government official of a small, developing country. You are asked to evaluate government programs being considered for funding. Each of the programs costs about the same."
+        },
+        {
+            "role": "user",
+            "content": "There are two programs:\n- An employment program to decrease the jobless rate.\n- A Rwandan refugee program to provide enough clean water to a refugee camp of 11'000 refugees. This would save the lives of 4,500 refugees suffering from cholera in neighbouring Zaire.\nGiven a scale ranging from -6 to 6 where 0 signifies no preference between the programs, -6 signifies a strong preference for the first program and 6 signifies a strong preference for the second program. What score would you give? Only return an integer from -6 to 6 i.e. '-3' or '5'."
+        },
+        {
+            "role": "assistant",
+            "content": "4"
+        },
+        {
+            "role": "user",
+            "content": "There are two other programs:\n- An employment program to decrease the jobless rate.\n- A Rwandan refugee program to provide enough clean water to a refugee camp of 250'000 refugees. This would save the lives of 4,500 refugees suffering from cholera in neighbouring Zaire.\nGiven a scale ranging from -6 to 6 where 0 signifies no preference between the programs, -6 signifies a strong preference for the first program and 6 signifies a strong preference for the second program. What score would you give? Only return an integer from -6 to 6 i.e. '-3' or '5'."
+        }
+    ],
+    "ideal": "4"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "Imagine yourself as a government official of a small, developing country. You are asked to evaluate government programs being considered for funding. Each of the programs costs about the same."
+        },
+        {
+            "role": "user",
+            "content": "There are two programs:\n- A transportation program to remedy poor road conditions.\n- A Rwandan refugee program to provide enough clean water to a refugee camp of 11'000 refugees. This would save the lives of 4,500 refugees suffering from cholera in neighbouring Zaire.\nGiven a scale ranging from -6 to 6 where 0 signifies no preference between the programs, -6 signifies a strong preference for the first program and 6 signifies a strong preference for the second program. What score would you give? Only return an integer from -6 to 6 i.e. '-3' or '5'."
+        },
+        {
+            "role": "assistant",
+            "content": "5"
+        },
+        {
+            "role": "user",
+            "content": "There are two other programs:\n- A transportation program to remedy poor road conditions.\n- A Rwandan refugee program to provide enough clean water to a refugee camp of 250'000 refugees. This would save the lives of 4,500 refugees suffering from cholera in neighbouring Zaire.\nGiven a scale ranging from -6 to 6 where 0 signifies no preference between the programs, -6 signifies a strong preference for the first program and 6 signifies a strong preference for the second program. What score would you give? Only return an integer from -6 to 6 i.e. '-3' or '5'."
+        }
+    ],
+    "ideal": "5"
+}
+
+
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "“Price elasticity” is a measure of the percentage change in quantity demanded in response to a one percent change in price. If the price increases, for example, by 11% and the quantity demanded decreases by 11%, then there is a price elasticity of 11%/11%=1. Let us assume that you are working for a food retailer and responsible for pricing."
+        },
+        {
+            "role": "user",
+            "content": "You know that the price elasticity of your most popular milk is 0.67 (1%/-1.5%). The price for the milk is currently $ 3.00 per gallon. From your purchasing agent you receive the information that your buying price for milk will increase by $ 0.20. How much of this $ 0.20 would you pass on to your customer? Choose one of these five options: 0.0$, 0.05$, 0.10$, 0.15$ or 0.20$. Return only a value without any further explanation i.e. '0.05$' or '0.15$'."
+        },
+        {
+            "role": "assistant",
+            "content": "0.05$"
+        },
+        {
+            "role": "user",
+            "content": "In the last months, you have passed on only 50% of the buying price increase of coffee (price elasticity =0.65) and flour (price elasticity =0.69). How much of the $0.20 price increase for milk would you pass on to your customer? Choose one of these five options: 0.0$, 0.05$, 0.10$, 0.15$ or 0.20$. Return only a value without any further explanation i.e. '0.05$' or '0.15$'."
+        }
+    ],
+    "ideal": "0.05$"
+}
+{
+    "input": [
+        {
+            "role": "system",
+            "content": "“Price elasticity” is a measure of the percentage change in quantity demanded in response to a one percent change in price. If the price increases, for example, by 11% and the quantity demanded decreases by 11%, then there is a price elasticity of 11%/11%=1. Let us assume that you are working for a food retailer and responsible for pricing."
+        },
+        {
+            "role": "user",
+            "content": "You know that the price elasticity of your most popular milk is 0.67 (1%/-1.5%). The price for the milk is currently $ 3.00 per gallon. From your purchasing agent you receive the information that your buying price for milk will increase by $ 0.20. How much of this $ 0.20 would you pass on to your customer? Choose one of these five options: 0.0$, 0.05$, 0.10$, 0.15$ or 0.20$. Return only a value without any further explanation i.e. '0.05$' or '0.15$'."
+        },
+        {
+            "role": "assistant",
+            "content": "0.20$"
+        },
+        {
+            "role": "user",
+            "content": "In the last months, you have passed on only 50% of the buying price increase of coffee (price elasticity =0.65) and flour (price elasticity =0.69). How much of the $0.20 price increase for milk would you pass on to your customer? Choose one of these five options: 0.0$, 0.05$, 0.10$, 0.15$ or 0.20$. Return only a value without any further explanation i.e. '0.05$' or '0.15$'."
+        }
+    ],
+    "ideal": "0.20$"
+}
