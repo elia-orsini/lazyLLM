@@ -1,6 +1,7 @@
 const fs = require("fs");
 
-const directoryPath = "./public/evals"; // replace with your directory path
+// directory where evals are contained
+const directoryPath = "./public/evals";
 
 fs.readdir(directoryPath, (error, files) => {
   if (error) {

@@ -1,6 +1,8 @@
 // import { normal, chiSquareTest, tTest, fTest } from "mathjs";
 import ttest2 from "@stdlib/stats-ttest2";
 import chi2test from "@stdlib/stats-chi2test";
+import anova1 from "@stdlib/stats-anova1";
+import jStat from "jstat";
 
 // indipendent t-test
 function calculateIndTTest(sample1, sample2) {
@@ -16,15 +18,40 @@ function calculateIndTTest(sample1, sample2) {
 //   return [statistic, pValue];
 // }
 
-// // one way anova
-// const calculateOneWayAnova = (samples) => {
-//   const result = fTest(...samples);
-//   const { p, statistic: fStat } = result;
+function calculateOneWayAnova(groups) {
+  const mean = calculateMean(groups.flat());
 
-//   return [fStat, p];
-// };
+  const groupMeans = groups.map(
+    (group) => group.reduce((acc, val) => acc + val, 0) / group.length
+  );
+  const ssb =
+    groupMeans.reduce((acc, val) => acc + (val - mean) ** 2, 0) *
+    groupMeans.length;
 
-// // chi square significance test
+  const ssw = groups.reduce(
+    (acc, group) =>
+      acc +
+      group.reduce(
+        (acc2, val) => acc2 + (val - groupMeans[groups.indexOf(group)]) ** 2,
+        0
+      ),
+    0
+  );
+
+  const dfb = groups.length - 1;
+  const dfw = groups.flat().length - groups.length;
+
+  const msb = ssb / dfb;
+  const msw = ssw / dfw;
+
+  const f = msb / msw;
+
+  const p = 1 - jStat.centralF.cdf(f, dfb, dfw);
+
+  return `f:${f}, p:${p}`;
+}
+
+// chi square significance test
 function calculateChiSquare(contingencyTable) {
   const result = chi2test(contingencyTable);
   const { pValue, statistic } = result;
@@ -32,14 +59,25 @@ function calculateChiSquare(contingencyTable) {
   return { statistic, pValue };
 }
 
-// // fisher exact test
-// const fisherExactTest = (table) => {
-//   const result = chiSquareTest(table);
-//   const { p } = result;
+// fisher exact test
+function calculateFisherExactTest(contingencyTable) {
+  const factorial = (n) => (n <= 1 ? 1 : n * factorial(n - 1));
 
-//   return p;
-// };   
+  const [a, b, c, d] = contingencyTable.flat();
 
+  const numerator =
+    factorial(a + b) * factorial(c + d) * factorial(a + c) * factorial(b + d);
+  const denominator =
+    factorial(a) *
+    factorial(b) *
+    factorial(c) *
+    factorial(d) *
+    factorial(a + b + c + d);
+
+  return numerator / denominator;
+}
+
+// cohens d
 function calculateCohensD(sample1, sample2) {
   const mean1 = calculateMean(sample1);
   const mean2 = calculateMean(sample2);
@@ -88,6 +126,17 @@ function calculateVariance(sample) {
   return sumOfSquaredDifferences / sample.length;
 }
 
+// calculateBestMatch
+function calculateBestMatch(sample, solution) {
+  const occurences = sample.reduce((occurences, value) => {
+    return occurences + (`${value}` === `${solution}`? 1 : 0)
+  }, 0);
+
+  console.log(sample);
+  
+  return occurences;
+}
+
 export default {
   calculateIndTTest,
   calculateMedian,
@@ -95,4 +144,7 @@ export default {
   calculateStd,
   calculateChiSquare,
   calculateCohensD,
+  calculateFisherExactTest,
+  calculateOneWayAnova,
+  calculateBestMatch,
 };

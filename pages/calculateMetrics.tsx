@@ -7,6 +7,7 @@ const IndexPage = () => {
   const [responses, setResponses] = useState<string[]>([]);
   const [result, setResult] = useState<any>();
   const [resultFormatLength, setResultFormatLength] = useState<number>(0);
+  const [ideal, setIdeal] = useState<any>();
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -68,13 +69,9 @@ const IndexPage = () => {
     calculateStd,
     calculateChiSquare,
     calculateCohensD,
+    calculateOneWayAnova,
+    calculateBestMatch,
   } = functions;
-
-  //   if (results.length > 0) console.log(calculateIndTTest(first, second));
-  //   if (results.length > 0) console.log(calculateMean(first));
-  //   if (results.length > 0) console.log(calculateStd(first));
-  //   if (results.length > 0) console.log(calculateMedian(first));
-  //   if (results.length > 0) console.log(calculateCohensD(first, second));
 
   return (
     <>
@@ -129,21 +126,32 @@ const IndexPage = () => {
               >
                 cohen&apos;s d
               </button>
+              <button
+                className="px-2 mx-2 border border-black hover:bg-secondary"
+                onClick={() => setResult(calculateOneWayAnova([first, second]))}
+              >
+                one way anova
+              </button>
             </div>
           )}
 
           <div className="mt-10 mx-auto">
             <span className="">best match:</span>
-            <input className="border border-black ml-2 w-40 px-1" />
+            <input
+              className="border border-black ml-2 w-40 px-1"
+              onChange={(e) => setIdeal(e.target.value)}
+            />
             <button
               className="px-2 border border-black bg-black text-white"
-              onClick={() => {}}
+              onClick={() => {
+                setResult(calculateBestMatch(first, ideal));
+              }}
             >
               analyse
             </button>
           </div>
 
-          {result && (
+          {result != null && (
             <>
               <div className="mt-10 mx-auto">
                 <p className="mx-auto uppercase text-sm font-bold">result</p>

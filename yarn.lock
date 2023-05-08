@@ -2629,6 +2629,29 @@
   dependencies:
     "@stdlib/utils-define-nonenumerable-read-only-property" "^0.0.x"
 
+"@stdlib/stats-anova1@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@stdlib/stats-anova1/-/stats-anova1-0.0.7.tgz#4aed8bb8811b3c7dad187bda238d0e61c6a9ce83"
+  integrity sha512-S4guf09mNhHNkGt+gThhZRYafofdkqQ2vHSG6qTi7LM22qAgRZMsOHLYpm+J/An7j5+z2MDOkg2ncNTVGb5JmQ==
+  dependencies:
+    "@stdlib/assert-has-own-property" "^0.0.x"
+    "@stdlib/assert-is-array" "^0.0.x"
+    "@stdlib/assert-is-boolean" "^0.0.x"
+    "@stdlib/assert-is-nan" "^0.0.x"
+    "@stdlib/assert-is-number" "^0.0.x"
+    "@stdlib/assert-is-number-array" "^0.0.x"
+    "@stdlib/assert-is-plain-object" "^0.0.x"
+    "@stdlib/assert-is-positive-integer" "^0.0.x"
+    "@stdlib/assert-is-typed-array-like" "^0.0.x"
+    "@stdlib/math-base-special-max" "^0.0.x"
+    "@stdlib/math-base-special-roundn" "^0.0.x"
+    "@stdlib/stats-base-dists-f-cdf" "^0.0.x"
+    "@stdlib/stats-incr-stdev" "^0.0.x"
+    "@stdlib/string-repeat" "^0.0.x"
+    "@stdlib/types" "^0.0.x"
+    "@stdlib/utils-copy" "^0.0.x"
+    "@stdlib/utils-define-read-only-property" "^0.0.x"
+
 "@stdlib/stats-base-dists-chisquare-cdf@^0.0.x":
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/@stdlib/stats-base-dists-chisquare-cdf/-/stats-base-dists-chisquare-cdf-0.0.7.tgz#3091214179fd6f7dfe423718713fb46c5b552cbe"
@@ -2643,6 +2666,17 @@
   integrity sha512-I4PfpsHO8rEfsFio5aA5Zs6qvz+DWPsRmPFeR760VKPhFpcCyLU4SJt66dqZlXcbOeupw72m8OewzIFt1b957g==
   dependencies:
     "@stdlib/math-base-assert-is-nan" "^0.0.x"
+    "@stdlib/utils-constant-function" "^0.0.x"
+    "@stdlib/utils-define-nonenumerable-read-only-property" "^0.0.x"
+
+"@stdlib/stats-base-dists-f-cdf@^0.0.x":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@stdlib/stats-base-dists-f-cdf/-/stats-base-dists-f-cdf-0.0.7.tgz#5b5bf51129d06e0a6b1c9e3b35393f9585ce8560"
+  integrity sha512-UzJ9cmF+Rmm9OppaB5D0VnR/spNUL+J6mDxhTzoDcIpsGoRdYwt2AyswOlc0IptTVGngek/ASvNDnuLeYq0BvQ==
+  dependencies:
+    "@stdlib/constants-float64-pinf" "^0.0.x"
+    "@stdlib/math-base-assert-is-nan" "^0.0.x"
+    "@stdlib/math-base-special-betainc" "^0.0.x"
     "@stdlib/utils-constant-function" "^0.0.x"
     "@stdlib/utils-define-nonenumerable-read-only-property" "^0.0.x"
 
@@ -2753,6 +2787,16 @@
     "@stdlib/math-base-assert-is-negative-zero" "^0.0.x"
     "@stdlib/types" "^0.0.x"
 
+"@stdlib/stats-incr-stdev@^0.0.x":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@stdlib/stats-incr-stdev/-/stats-incr-stdev-0.0.7.tgz#2def76fdd7693e0578393dfc36218f443023ac5d"
+  integrity sha512-xfCCkL+fp7B/NVzQNIkJ7sJ+J/9utnzDb9ahXLx7D4oZctxHB6O9W7Uq2jDt4iWhn8Tzu1NlYPN8GyNDLZFcbQ==
+  dependencies:
+    "@stdlib/assert-is-number" "^0.0.x"
+    "@stdlib/math-base-assert-is-nan" "^0.0.x"
+    "@stdlib/math-base-special-sqrt" "^0.0.x"
+    "@stdlib/types" "^0.0.x"
+
 "@stdlib/stats-ttest2@^0.0.7":
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/@stdlib/stats-ttest2/-/stats-ttest2-0.0.7.tgz#7d2820fc99525b6fee5639aace842f97e93ed5e4"
@@ -2841,6 +2885,23 @@
     "@stdlib/process-read-stdin" "^0.0.x"
     "@stdlib/streams-node-stdin" "^0.0.x"
     "@stdlib/string-format" "^0.0.x"
+
+"@stdlib/string-repeat@^0.0.x":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@stdlib/string-repeat/-/string-repeat-0.0.9.tgz#168c29b460993251ad7ebc374d73f2247fd5b7b2"
+  integrity sha512-Zy2SFWk7DwD5W4SlkExp+sJHdwsS8Of8z4KPvoMdZA8sR111TaC1K6dARapahDr9s0Fxg3LigbCV30mdQqFwdw==
+  dependencies:
+    "@stdlib/assert-is-nonnegative-integer" "^0.0.x"
+    "@stdlib/assert-is-regexp-string" "^0.0.x"
+    "@stdlib/assert-is-string" "^0.0.x"
+    "@stdlib/cli-ctor" "^0.0.x"
+    "@stdlib/constants-float64-max-safe-integer" "^0.0.x"
+    "@stdlib/fs-read-file" "^0.0.x"
+    "@stdlib/process-read-stdin" "^0.0.x"
+    "@stdlib/regexp-eol" "^0.0.x"
+    "@stdlib/streams-node-stdin" "^0.0.x"
+    "@stdlib/string-format" "^0.0.x"
+    "@stdlib/utils-regexp-from-string" "^0.0.x"
 
 "@stdlib/string-replace@^0.0.x":
   version "0.0.11"
