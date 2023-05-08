@@ -54,7 +54,7 @@ export default function Eval({ items }) {
           ]}
         />
 
-        <p className="uppercase text-xs mt-10">description</p>
+        <p className="uppercase text-xs mt-10"><span className="bg-secondary px-2">description</span></p>
         {evalsDesc ? (
           <div className="text-lg">{evalsDesc}</div>
         ) : (
@@ -67,7 +67,7 @@ export default function Eval({ items }) {
         </div>
 
         <div className="uppercase text-sm mt-6">
-          <p className="text-xs">examples</p>
+          <p className="text-xs"><span className="bg-secondary px-2">examples</span></p>
           {console.log(evalsData)}
           {evalsData &&
             evalsData.slice(0, 3).map((item, index) => (

@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { IPrompt } from "types";
 import { useState } from "react";
+import Footer from "@components/Footer";
 
 export default function Post({ items }) {
   const [showDiscussion, setShowDiscussion] = useState<boolean>(false);
@@ -24,7 +25,7 @@ export default function Post({ items }) {
   const discussionPresent = filteredItems.every((item: IPrompt) => item.discussion !== "");
 
   return (
-    <div className="mx-auto">
+    <div className="mx-auto w-10/12">
       <Title />
 
       <div className="mt-4 w-full text-center my-4 grid sm:grid-cols-2">
@@ -57,6 +58,8 @@ export default function Post({ items }) {
           return <ItemDetailed key={item.id} content={item} />;
         })}
       </div>
+
+      <Footer />
     </div>
   );
 }

@@ -95,7 +95,7 @@ export default function TemplateMode() {
         onChange={(e) => {
           setSystemText(e.target.value);
         }}
-        className="border rounded border-black w-full px-2 py-2 font-semibold text-sm"
+        className="border rounded border-black w-full px-2 py-2 font-semibold text-sm focus:outline-none"
       ></textarea>
 
       <p className="uppercase font-bold text-xs mt-2">user prompt</p>
@@ -103,7 +103,7 @@ export default function TemplateMode() {
         onChange={(e) => {
           setPromptText(e.target.value);
         }}
-        className="border rounded border-black w-full px-2 py-2 font-semibold text-sm"
+        className="border rounded border-black w-full px-2 py-2 font-semibold text-sm focus:outline-none"
       ></textarea>
 
       <form
@@ -134,7 +134,7 @@ export default function TemplateMode() {
         <div className="mt-8">
           <span className="uppercase font-bold text-xs">ideal output</span>
           <input
-            className="border border-black mx-2"
+            className="border border-black mx-2 px-2 focus:outline-none"
             type="text"
             name="ideal"
           />

@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import downloadJSON from "@utils/downloadJSON";
 import { IPrompt, IMessage } from "types";
-import { withPasswordProtect } from "next-password-protect";
 import { Oval } from "react-loading-icons";
 import Title from "@components/Title";
 import PopUp from "@components/PopUp";
+import Cookies from "js-cookie";
+import PopUpForm from "@components/PopUpForm";
 
-const Gpt3Request = ({ secret }) => {
+const Gpt3Request = () => {
   const [prompt, setPrompt] = useState<string>("");
   const [responses, setResponses] = useState<Array<IMessage>>([]);
 
@@ -28,6 +29,8 @@ const Gpt3Request = ({ secret }) => {
   const [error, setError] = useState<string>("");
 
   const [danExplanation, setDanExplanation] = useState<boolean>(false);
+
+  const privateKey = Cookies.get("privateKey");
 
   const explanation = `
   DAN mode is a custom prompt that lets you partially remove filters from gpt-3.5. 
@@ -59,7 +62,7 @@ const Gpt3Request = ({ secret }) => {
     event: React.FormEvent<HTMLFormElement>
   ): Promise<Array<string>> => {
     event.preventDefault();
-    const API_KEY = secret;
+    const API_KEY = privateKey;
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
     const responses = [];
@@ -176,8 +179,10 @@ const Gpt3Request = ({ secret }) => {
   };
 
   return (
-    <div className="mx-auto h-screen w-full px-10">
-      <Title includeDefaultLinks={false} />
+    <div className="mx-auto h-screen w-10/12">
+      <Title />
+
+      {!privateKey && <PopUpForm />}
 
       <form className="w-full bg-gray-200 rounded-xl" onSubmit={handleSubmit}>
         <div className="grid items-center px-3 rounded-xl py-3 mt-5 border border-black">
@@ -463,12 +468,4 @@ const Gpt3Request = ({ secret }) => {
   );
 };
 
-export const getStaticProps = async () => {
-  return {
-    props: {
-      secret: process.env.OPEN_AI_SECRET,
-    },
-  };
-};
-
-export default withPasswordProtect(Gpt3Request, {});
+export default Gpt3Request;

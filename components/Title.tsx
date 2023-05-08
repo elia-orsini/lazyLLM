@@ -15,9 +15,19 @@ export default function Title({ links = [], includeDefaultLinks = true }) {
 
         {includeDefaultLinks && (
           <div className="text-right">
+            <Link href="/datasets" passHref>
+              <button className="uppercase text-sm mt-2 mx-1 my-auto font-semibold hover:bg-gray-200 px-1">
+                datasets
+              </button>
+            </Link>
             <Link href="/chatgptBattle" passHref>
-              <button className="uppercase text-sm mt-2 my-auto font-semibold hover:bg-gray-200 px-1">
-                chatGPTBattle
+              <button className="uppercase text-sm mt-2 mx-1 my-auto font-semibold hover:bg-gray-200 px-1">
+                testing
+              </button>
+            </Link>
+            <Link href="/calculateMetrics" passHref>
+              <button className="uppercase text-sm mt-2 ml-1  my-auto font-semibold hover:bg-gray-200 px-1">
+                analysis
               </button>
             </Link>
           </div>

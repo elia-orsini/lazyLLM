@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Title from "@components/Title";
 import Footer from "@components/Footer";
 import functions from "@utils/stats";
@@ -8,6 +8,11 @@ const IndexPage = () => {
   const [result, setResult] = useState<any>();
   const [resultFormatLength, setResultFormatLength] = useState<number>(0);
   const [ideal, setIdeal] = useState<any>();
+  const [numerical, setNumerical] = useState<boolean>(true);
+  const [results, setResults] = useState<any>([]);
+
+  const [first, setFirst] = useState<any>([]);
+  const [second, setSecond] = useState<any>([]);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -23,7 +28,7 @@ const IndexPage = () => {
     reader.readAsText(file as Blob);
   };
 
-  function format_n_values_data(responses, n = 1) {
+  function formatNumericValues(responses, n = 1) {
     let results = [];
     let valid = 0;
     let invalid = 0;
@@ -54,13 +59,35 @@ const IndexPage = () => {
     return { results, valid, invalid, total, invalid_responses };
   }
 
+  function formatTextualValues(responses) {
+    const results = [];
+
+    for (let i = 0; i < responses.length; i++) {
+      let cleaned = responses[i]["edited"].replace(/\n/g, "");
+      cleaned = cleaned.replace(/,/g, "");
+
+      results.push(cleaned);
+    }
+
+    return { results };
+  }
+
   function get_n_value(results, n) {
     return results.map((i) => i[n]);
   }
 
-  const { results } = format_n_values_data(responses, resultFormatLength);
-  const first = get_n_value(results, 0);
-  const second = get_n_value(results, 1);
+  useEffect(() => {
+    if (numerical) {
+      const { results } = formatNumericValues(responses, resultFormatLength);
+      setResults(results);
+      setFirst(get_n_value(results, 0));
+      setSecond(get_n_value(results, 1));
+    } else {
+      const { results } = formatTextualValues(responses);
+      setResults(results);
+      setFirst(results.map((i) => i));
+    }
+  }, [responses, numerical]);
 
   const {
     calculateIndTTest,
@@ -78,15 +105,27 @@ const IndexPage = () => {
       <div className="mx-auto w-10/12 h-screen">
         <Title />
 
-        <div className="flex w-full grid grid-col col-1 h-4/6">
+        <div className="flex w-full grid grid-col col-1 bg-blac">
           <div className="mx-auto">
+          <p className="uppercase text-xs mt-8"><span className="">import dataset</span></p>
             <input
-              className="mx-auto mt-8 border p-2 border-black bg-secondary"
+              className="mx-auto mt-1 border p-2 border-black bg-secondary"
               id="files"
               type="file"
               accept=".json"
               onChange={handleFileUpload}
             />
+          </div>
+
+          <div className="mx-auto mt-10">
+          
+          <span className="mr-2">prompt format is</span>
+            <button
+              className="border border-black px-2 hover:bg-secondary"
+              onClick={() => setNumerical(!numerical)}
+            >
+              {numerical ? "numerical" : "textual"}
+            </button>
           </div>
 
           {resultFormatLength === 1 && (
@@ -135,21 +174,23 @@ const IndexPage = () => {
             </div>
           )}
 
-          <div className="mt-10 mx-auto">
-            <span className="">best match:</span>
-            <input
-              className="border border-black ml-2 w-40 px-1"
-              onChange={(e) => setIdeal(e.target.value)}
-            />
-            <button
-              className="px-2 border border-black bg-black text-white"
-              onClick={() => {
-                setResult(calculateBestMatch(first, ideal));
-              }}
-            >
-              analyse
-            </button>
-          </div>
+          {first.length > 0 && (
+            <div className="mt-10 mx-auto">
+              <span className="">best match:</span>
+              <input
+                className="border border-black ml-2 w-40 px-1"
+                onChange={(e) => setIdeal(e.target.value)}
+              />
+              <button
+                className="px-2 border border-black bg-black text-white"
+                onClick={() => {
+                  setResult(calculateBestMatch(first, ideal));
+                }}
+              >
+                analyse
+              </button>
+            </div>
+          )}
 
           {result != null && (
             <>

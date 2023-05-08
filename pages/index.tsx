@@ -11,9 +11,9 @@ const Landing = () => {
             lazyLLM
           </h2>
           <div className="text-right">
-            <h2 className="inline font-semibold">about</h2>
+            <h2 className="inline mx-1 px-1 font-semibold hover:bg-gray-200 text-sm cursor-pointer uppercase">about</h2>
             <Link href="/datasets">
-              <h2 className="inline pl-4 font-semibold cursor-pointer">
+              <h2 className="inline ml-1 px-1 font-semibold cursor-pointer text-sm hover:bg-gray-200 uppercase">
                 enter
               </h2>
             </Link>

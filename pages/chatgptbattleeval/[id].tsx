@@ -9,14 +9,16 @@ import {
   ChatMessage,
   EvalYAMLFile,
 } from "types";
-import { withPasswordProtect } from "next-password-protect";
 import { Oval } from "react-loading-icons";
 import Title from "@components/Title";
 import YAML from "js-yaml";
 import { useRouter } from "next/router";
 import PromptVisualiser from "@components/PromptVisualiser";
+import Cookies from "js-cookie";
+import PopUp from "@components/PopUp";
+import PopUpForm from "@components/PopUpForm";
 
-const Gpt3Request = ({ secret }) => {
+const Gpt3Request = () => {
   const [prompt, setPrompt] = useState<ChatMessage>();
   const [responses, setResponses] = useState<Array<IMessage>>([]);
 
@@ -43,6 +45,8 @@ const Gpt3Request = ({ secret }) => {
 
   const router = useRouter();
   const id = router.query.id as string;
+
+  const privateKey = Cookies.get("privateKey");
 
   useEffect(() => {
     const path = `/evals/${id}`;
@@ -81,7 +85,7 @@ const Gpt3Request = ({ secret }) => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const API_KEY = secret;
+    const API_KEY = privateKey;
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
     const responsesArray = [];
@@ -152,7 +156,7 @@ const Gpt3Request = ({ secret }) => {
 
       qaPrompt.push(magicQaPrompt);
 
-      const API_KEY = secret;
+      const API_KEY = privateKey;
       const API_URL = "https://api.openai.com/v1/chat/completions";
 
       return axios
@@ -228,6 +232,8 @@ const Gpt3Request = ({ secret }) => {
         links={[{ text: "evals", action: "/evalslist" }]}
       />
 
+      {!privateKey && (<PopUpForm />)}
+
       <form className="w-full bg-gray-200 rounded-xl" onSubmit={handleSubmit}>
         <div className="grid items-center px-3 rounded-xl py-3 mt-5 border border-black">
           <div className="flex">
@@ -236,7 +242,7 @@ const Gpt3Request = ({ secret }) => {
               className="px-2 border border-black hover:bg-gray-200"
               onClick={() => {
                 currentIndex > 0 && setCurrentIndex(currentIndex - 1);
-                setPrompt(prompts[currentIndex - 1]);
+                currentIndex > 0 && setPrompt(prompts[currentIndex - 1]);
               }}
             >
               <svg
@@ -285,7 +291,7 @@ const Gpt3Request = ({ secret }) => {
 
             <button
               type="button"
-              className={`border border-black px-2 ml-10`}
+              className={`border border-black px-2 ml-10 ${responses.length === 0 && "opacity-50"}`}
               onClick={() => {
                 qaNumber();
               }}
@@ -295,7 +301,7 @@ const Gpt3Request = ({ secret }) => {
 
             <button
               type="button"
-              className="border border-black px-2 ml-10"
+              className={`border border-black px-2 ml-10 ${responses.length === 0 && "opacity-50"}`}
               onClick={() => {
                 qaNumber("text");
               }}
@@ -502,19 +508,4 @@ const Gpt3Request = ({ secret }) => {
   );
 };
 
-export const getStaticProps = async () => {
-  return {
-    props: {
-      secret: process.env.OPEN_AI_SECRET,
-    },
-  };
-};
-
-export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
-  return {
-    paths: [], //indicates that no page needs be created at build time
-    fallback: "blocking", //indicates the type of fallback
-  };
-};
-
-export default withPasswordProtect(Gpt3Request, {});
+export default Gpt3Request;

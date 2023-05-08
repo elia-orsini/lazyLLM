@@ -33,10 +33,7 @@ const EvalsList = () => {
 
   return (
     <div className="w-10/12 mx-auto h-screen">
-      <Title
-        includeDefaultLinks={false}
-        links={[{ text: "home", action: "/" }]}
-      />
+      <Title />
 
       <div className="flex flex-col h-3/6">
         <div

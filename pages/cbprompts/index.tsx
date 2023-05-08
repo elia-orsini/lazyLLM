@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Client } from "@notionhq/client";
 import Item from "@components/Item";
 import extractData from "@utils/extractData";
 import Title from "@components/Title";
 import { IPrompt } from "types";
+import Footer from "@components/Footer";
 
 const IndexPage = ({ items, cognitiveBiases }) => {
   const [biasSelected, setBias] = useState("");
@@ -32,7 +33,7 @@ const IndexPage = ({ items, cognitiveBiases }) => {
 
   return (
     <>
-      <div className="mx-auto">
+      <div className="mx-auto w-10/12">
         <Title />
 
         <div className="mx-auto py-2 mt-2 grid grid-cols-2">
@@ -47,13 +48,6 @@ const IndexPage = ({ items, cognitiveBiases }) => {
                 );
               })}
             </select>
-
-            <button
-              className={`border px-2 mx-1 border-black ${showOnlyTested ? "bg-black text-white" : "bg-white text-black"}`}
-              onClick={() => setShowOnlyTested(!showOnlyTested)}
-            >
-              show only tested
-            </button>
           </div>
 
           <div className="inline text-right text-xs my-auto">
@@ -61,11 +55,13 @@ const IndexPage = ({ items, cognitiveBiases }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
           {filteredArr.map((item: IPrompt) => {
             return <Item key={item.id} content={item} fullData={items} />;
           })}
         </div>
+
+        <Footer />
       </div>
     </>
   );
@@ -84,7 +80,9 @@ export const getStaticProps = async () => {
     return extractData(item);
   });
 
-  const cognitiveBiases = Array.from(new Set(cleanData.map((obj) => obj.cognitiveBias)));
+  const cognitiveBiases = Array.from(
+    new Set(cleanData.map((obj) => obj.cognitiveBias))
+  );
 
   return {
     props: {
