@@ -98,7 +98,7 @@ const IndexPage = () => {
       setResults(results);
       setFirst(results.map((i) => i));
     }
-  }, [responses, numerical]);
+  }, [responses, numerical, resultFormatLength]);
 
   const {
     calculateIndTTest,
@@ -142,7 +142,7 @@ const IndexPage = () => {
             </button>
           </div>
 
-          {resultFormatLength === 1 && (
+          {resultFormatLength === 1 && numerical && (
             <div className="mt-10 mx-auto">
               <button
                 className="px-2 mx-2 border border-black hover:bg-secondary"
@@ -165,7 +165,7 @@ const IndexPage = () => {
             </div>
           )}
 
-          {resultFormatLength === 2 && (
+          {resultFormatLength === 2 && numerical && (
             <div className="mt-10 mx-auto">
               <button
                 className="px-2 mx-2 border border-black hover:bg-secondary"
@@ -199,7 +199,11 @@ const IndexPage = () => {
               <button
                 className="px-2 border border-black bg-black text-white"
                 onClick={() => {
-                  setResult(`${calculateBestMatch(first, ideal)} / ${first.length} - (${calculateBestMatch(first, ideal)/first.length*100}% accuracy)`);
+                  setResult(
+                    `${calculateBestMatch(first, ideal)} / ${first.length} - (${
+                      (calculateBestMatch(first, ideal) / first.length) * 100
+                    }% accuracy)`
+                  );
                 }}
               >
                 analyse
