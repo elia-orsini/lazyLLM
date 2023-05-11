@@ -47,9 +47,9 @@ export default function Post({ items }) {
         </div>
 
         <div className="text-right text-sm my-auto">
-          {filteredItems[0].cognitiveBias} - {filteredItems[0].participants} participants -
-          <span className="border-black px-2">{allElementsPresent ? "all variants present" : "missing variants"}</span>-{" "}
-          <span className={`border-black`}>{allVariantsTested ? "tested" : "not tested yet"} </span>
+          {filteredItems[0].cognitiveBias} - {filteredItems[0].participants} participants
+          {/* <span className="border-black px-2">{allElementsPresent ? "all variants present" : "missing variants"}</span>-{" "} */}
+          {/* <span className={`border-black`}>{allVariantsTested ? "tested" : "not tested yet"} </span> */}
         </div>
       </div>
 

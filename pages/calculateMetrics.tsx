@@ -219,7 +219,7 @@ const IndexPage = () => {
           )}
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
