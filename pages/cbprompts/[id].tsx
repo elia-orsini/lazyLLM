@@ -39,11 +39,11 @@ export default function Post({ items }) {
             download as json
           </button>
 
-          {discussionPresent && (
+          {/* {discussionPresent && (
             <Link href={`/discussion/${id}`} passHref>
               <button className="hover:bg-gray-300 bg-gray-200 px-1 font-mono text-sm ml-4">show discussion</button>
             </Link>
-          )}
+          )} */}
         </div>
 
         <div className="text-right text-sm my-auto">

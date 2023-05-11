@@ -11,21 +11,28 @@ const IndexPage = () => {
   const [numerical, setNumerical] = useState<boolean>(true);
   const [results, setResults] = useState<any>([]);
 
+  const [error, setError] = useState<string>("");
+
   const [first, setFirst] = useState<any>([]);
   const [second, setSecond] = useState<any>([]);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    const reader = new FileReader();
+    try {
+      const file = e.target.files?.[0];
+      const reader = new FileReader();
 
-    reader.onload = (event) => {
-      const jsonData = JSON.parse(event.target?.result as string);
+      reader.onload = (event) => {
+        const jsonData = JSON.parse(event.target?.result as string);
 
-      setResponses(jsonData.responses);
-      setResultFormatLength(jsonData.resultFormatLength);
-    };
+        setResponses(jsonData.responses);
+        setResultFormatLength(jsonData.resultFormatLength);
+        setIdeal(jsonData.ideal);
+      };
 
-    reader.readAsText(file as Blob);
+      reader.readAsText(file as Blob);
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   function formatNumericValues(responses, n = 1) {
@@ -35,25 +42,29 @@ const IndexPage = () => {
     let total = 0;
     let invalid_responses = [];
 
-    for (let i = 0; i < responses.length; i++) {
-      try {
-        let cleaned = responses[i]["edited"].replace(/\n/g, "");
-        cleaned = cleaned.replace(/,/g, "");
+    try {
+      for (let i = 0; i < responses.length; i++) {
+        try {
+          let cleaned = responses[i]["edited"].replace(/\n/g, "");
+          cleaned = cleaned.replace(/,/g, "");
 
-        let formatted = cleaned.split(" ").map(parseFloat);
+          let formatted = cleaned.split(" ").map(parseFloat);
 
-        if (formatted.length === n && formatted != "NaN") {
-          results.push(formatted);
-          valid++;
-        } else {
-          invalid_responses.push(responses[i]["edited"]);
+          if (formatted.length === n && formatted != "NaN") {
+            results.push(formatted);
+            valid++;
+          } else {
+            invalid_responses.push(responses[i]["edited"]);
+            invalid++;
+          }
+        } catch (error) {
           invalid++;
+          invalid_responses.push(responses[i]["edited"]);
         }
-      } catch (error) {
-        invalid++;
-        invalid_responses.push(responses[i]["edited"]);
+        total++;
       }
-      total++;
+    } catch (error) {
+      setError(error.message);
     }
 
     return { results, valid, invalid, total, invalid_responses };
@@ -107,7 +118,9 @@ const IndexPage = () => {
 
         <div className="flex w-full grid grid-col col-1 bg-blac">
           <div className="mx-auto">
-          <p className="uppercase text-xs mt-8"><span className="">import dataset</span></p>
+            <p className="uppercase text-xs mt-8">
+              <span className="">import dataset</span>
+            </p>
             <input
               className="mx-auto mt-1 border p-2 border-black bg-secondary"
               id="files"
@@ -115,11 +128,12 @@ const IndexPage = () => {
               accept=".json"
               onChange={handleFileUpload}
             />
+
+            <p className="font-bold text-sm text-red-700">{error}</p>
           </div>
 
           <div className="mx-auto mt-10">
-          
-          <span className="mr-2">prompt format is</span>
+            <span className="mr-2">prompt format is</span>
             <button
               className="border border-black px-2 hover:bg-secondary"
               onClick={() => setNumerical(!numerical)}
@@ -179,12 +193,13 @@ const IndexPage = () => {
               <span className="">best match:</span>
               <input
                 className="border border-black ml-2 w-40 px-1"
+                value={ideal}
                 onChange={(e) => setIdeal(e.target.value)}
               />
               <button
                 className="px-2 border border-black bg-black text-white"
                 onClick={() => {
-                  setResult(calculateBestMatch(first, ideal));
+                  setResult(`${calculateBestMatch(first, ideal)} / ${first.length} - (${calculateBestMatch(first, ideal)/first.length*100}% accuracy)`);
                 }}
               >
                 analyse
