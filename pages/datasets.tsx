@@ -26,13 +26,13 @@ const IndexPage = () => {
             title="OPENAI EVALS"
             link={"/evalslist"}
             bgImage1="/dalle8.png"
-            bgImage2="/dalle4.png"
+            bgImage2="/dalle8.png"
           />
           <PromptPreview
             title="COGNITIVE BIASES PROMPTS"
             link={"/cbprompts"}
             bgImage1="/dalle9.png"
-            bgImage2="/dalle5.png"
+            bgImage2="/dalle9.png"
           />
         </div>
 
