@@ -25,7 +25,14 @@ const IndexPage = () => {
         const jsonData = JSON.parse(event.target?.result as string);
 
         setResponses(jsonData.responses);
-        setResultFormatLength(jsonData.resultFormatLength);
+
+        if (jsonData.resultFormatLength) {
+          setResultFormatLength(jsonData.resultFormatLength);
+        }
+        if (!jsonData.resultFormatLength && numerical) {
+          setResultFormatLength(1);
+        }
+
         setIdeal(jsonData.ideal);
       };
 
