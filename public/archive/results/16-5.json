@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\nI would give a score of 4 to the Rwandan refugee program to provide clean water to the refugee camp. While the employment program is important for the development of the country, the immediate need to save the lives of refugees suffering from cholera is a pressing issue that cannot be ignored. Providing clean water will not only save lives but also promote better health among the refugees and prevent the spread of diseases to neighboring countries.",

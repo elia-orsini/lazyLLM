@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\nAs an AI language model, I don't have personal opinions. However, as a rational evaluator, I would recommend giving a score of 4 to the employment program. This is because decreasing the jobless rate is crucial for the country's economic growth and stability. A higher number of employed citizens would result in increased purchasing power, which in turn would encourage more businesses and investments in the country. On the other hand, the transportation program, while also important, may not have the same immediate impact on the economy.",

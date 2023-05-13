@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\nMy closest prediction is that Marcus flipped the coin around 20 times before I entered the room.",

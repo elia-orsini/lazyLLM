@@ -3,7 +3,7 @@
     "resultFormatLength": 2,
     "maxTokens": 300,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\n1. 5%\n2. 2% 3%",

@@ -1,5 +1,5 @@
 {
-    "prompt": "You are a serious reader of the financial pages but until recently have had few funds to invest. \nThat is when you inherited a portfolio of cash and securities. \nA significant portion of this portfolio is invested in moderate-risk Company A.\nYou are deliberating whether to leave the portfolio intact or to change it by investing in other securities. (The tax and broker commission consequences of any change are insignificant.) \nYour choices are:\n- Retain the investment in moderate-risk Company A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value.\n- Invest in high-risk Company B. Over a year's time, the stock has a chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value.\n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%.\n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\n\nReturn only a value from 1 to 4 representing your choice i.e. \"2\" or \"4\".",
+    "prompt": "You are a serious reader of the financial pages but until recently have had few funds to invest. \nThat is when you inherited a portfolio of cash and securities. \nA significant portion of this portfolio is invested in high-risk Company B.\nyou are deliberating whether to leave the portfolio intact or to change it by investing in other securities. (The tax and broker commission consequences of any change are insignificant.)\nYour choices are (check one):\n- Retain the investment in high-risk Company B. Over a year's time, the stock has a chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value.\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value.\n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%.\n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\n\nReturn only a value from 1 to 4 representing your choice i.e. \"2\" or \"4\".",
     "resultFormatLength": 1,
     "maxTokens": 50,
     "temperature": 1,
@@ -12,8 +12,8 @@
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 1,
             "finishReason": "stop"
         },
@@ -24,44 +24,44 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 3,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 4,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 5,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 6,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 7,
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "2",
+            "edited": "2",
             "index": 8,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 9,
             "finishReason": "stop"
         },
@@ -72,32 +72,32 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 11,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2. Invest in moderate risk Co. A.",
+            "edited": "2",
             "index": 12,
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "1",
+            "edited": "1",
             "index": 13,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "2",
+            "edited": "2",
             "index": 14,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "2",
+            "edited": "2",
             "index": 15,
             "finishReason": "stop"
         },
@@ -108,68 +108,68 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 17,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 18,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 19,
             "finishReason": "stop"
         },
         {
-            "text": "1. Retain the investment in moderate-risk Company A.",
-            "edited": "1",
+            "text": "3",
+            "edited": "3",
             "index": 20,
+            "finishReason": "stop"
+        },
+        {
+            "text": "2",
+            "edited": "2",
+            "index": 21,
+            "finishReason": "stop"
+        },
+        {
+            "text": "2",
+            "edited": "2",
+            "index": 22,
+            "finishReason": "stop"
+        },
+        {
+            "text": "2",
+            "edited": "2",
+            "index": 23,
             "finishReason": "stop"
         },
         {
             "text": "1",
             "edited": "1",
-            "index": 21,
-            "finishReason": "stop"
-        },
-        {
-            "text": "4",
-            "edited": "4",
-            "index": 22,
-            "finishReason": "stop"
-        },
-        {
-            "text": "3",
-            "edited": "3",
-            "index": 23,
-            "finishReason": "stop"
-        },
-        {
-            "text": "3",
-            "edited": "3",
             "index": 24,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "2",
+            "edited": "2",
             "index": 25,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "2",
+            "edited": "2",
             "index": 26,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "2",
+            "edited": "2",
             "index": 27,
             "finishReason": "stop"
         },
@@ -180,8 +180,8 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 29,
             "finishReason": "stop"
         },
@@ -192,32 +192,32 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 31,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 32,
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "1",
+            "edited": "1",
             "index": 33,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 34,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 35,
             "finishReason": "stop"
         },
@@ -240,14 +240,14 @@
             "finishReason": "stop"
         },
         {
-            "text": "2",
-            "edited": "2",
+            "text": "1",
+            "edited": "1",
             "index": 39,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 40,
             "finishReason": "stop"
         },
@@ -258,14 +258,14 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 42,
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 43,
             "finishReason": "stop"
         },
@@ -276,8 +276,8 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 45,
             "finishReason": "stop"
         },
@@ -288,20 +288,20 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
-            "edited": "1",
+            "text": "2",
+            "edited": "2",
             "index": 47,
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "2",
+            "edited": "2",
             "index": 48,
             "finishReason": "stop"
         },
         {
-            "text": "4. Invest in municipal bonds with a tax-free rate of return of 6%.",
-            "edited": "4",
+            "text": "2",
+            "edited": "2",
             "index": 49,
             "finishReason": "stop"
         }

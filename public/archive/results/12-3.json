@@ -3,7 +3,7 @@
     "resultFormatLength": 2,
     "maxTokens": 250,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\n4 6 (Candidate Firm 1: 4, Candidate Firm 2: 6) \n\nWhile Candidate Firm 1 has a strong example of working with a top-ranked bank, they have not provided any additional examples to showcase their experience and expertise. On the other hand, Candidate Firm 2 has worked with not only a top-ranked bank, but also two other banks that are still ranked within the top 100 in the industry. This indicates a broader range of experience and potentially more comprehensive solutions. However, without additional information or research, it is impossible to determine the true quality of either consulting firm.",

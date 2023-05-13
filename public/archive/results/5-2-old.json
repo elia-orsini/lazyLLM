@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\nAs an AI language model, I cannot make assumptions or predictions based on incomplete information. It is not possible to determine how many times the man rolled the dice before entering the room based on the given information.",

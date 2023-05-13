@@ -1,5 +1,5 @@
 {
-    "prompt": "You are a serious reader of the financial pages but until recently have had few funds to invest. \nThat is when you inherited a portfolio of cash and securities. \nA significant portion of this portfolio is invested in moderate-risk Company A.\nYou are deliberating whether to leave the portfolio intact or to change it by investing in other securities. (The tax and broker commission consequences of any change are insignificant.) \nYour choices are:\n- Retain the investment in moderate-risk Company A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value.\n- Invest in high-risk Company B. Over a year's time, the stock has a chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value.\n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%.\n- Invest in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%.\n\nReturn only a value from 1 to 4 representing your choice i.e. \"2\" or \"4\".",
+    "prompt": "You are a serious reader of the financial pages but until recently have had few funds to invest. \nThat is when you inherited a portfolio of cash and securities from your great-uncle. \nA significant portion of this portfolio is invested in municipal bonds.\nYou are deliberating whether to leave the portfolio intact or to change it by investing in other securities. (The tax and broker commission consequences of any change are insignificant.)\nYour choices are:\n- Retain the investment in municipal bonds. Over a year's time, these will yield a tax-free rate of return of 6%\n- Invest in moderate risk Co. A. Over a year's time, the stock has a .5 chance of increasing 30% in value, a .2 chance of being unchanged, and a .3 chance of declining 20% in value.\n- Invest in high-risk Company B. Over a year's time, the stock has a chance of doubling in value, a .3 chance of being unchanged, and a .3 chance of declining 40% in value.\n- Invest in treasury bills. Over a year's time, they will yield a nearly certain return of 9%.\n\nReturn only a value from 1 to 4 representing your choice i.e. \"2\" or \"4\".",
     "resultFormatLength": 1,
     "maxTokens": 50,
     "temperature": 1,
@@ -12,8 +12,8 @@
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 1,
             "finishReason": "stop"
         },
@@ -42,7 +42,7 @@
             "finishReason": "stop"
         },
         {
-            "text": "1",
+            "text": "1. Retain investment in municipal bonds.",
             "edited": "1",
             "index": 6,
             "finishReason": "stop"
@@ -54,8 +54,8 @@
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "1",
+            "edited": "1",
             "index": 8,
             "finishReason": "stop"
         },
@@ -66,8 +66,8 @@
             "finishReason": "stop"
         },
         {
-            "text": "2",
-            "edited": "2",
+            "text": "1",
+            "edited": "1",
             "index": 10,
             "finishReason": "stop"
         },
@@ -84,20 +84,20 @@
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "1",
+            "edited": "1",
             "index": 13,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 14,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 15,
             "finishReason": "stop"
         },
@@ -126,7 +126,7 @@
             "finishReason": "stop"
         },
         {
-            "text": "1. Retain the investment in moderate-risk Company A.",
+            "text": "1",
             "edited": "1",
             "index": 20,
             "finishReason": "stop"
@@ -138,44 +138,44 @@
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "1",
+            "edited": "1",
             "index": 22,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 23,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 24,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 25,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 26,
             "finishReason": "stop"
         },
         {
-            "text": "3",
-            "edited": "3",
+            "text": "1",
+            "edited": "1",
             "index": 27,
             "finishReason": "stop"
         },
         {
-            "text": "2",
-            "edited": "2",
+            "text": "1",
+            "edited": "1",
             "index": 28,
             "finishReason": "stop"
         },
@@ -186,13 +186,13 @@
             "finishReason": "stop"
         },
         {
-            "text": "2",
-            "edited": "2",
+            "text": "1",
+            "edited": "1",
             "index": 30,
             "finishReason": "stop"
         },
         {
-            "text": "1",
+            "text": "1 (Retain the investment in municipal bonds)",
             "edited": "1",
             "index": 31,
             "finishReason": "stop"
@@ -204,8 +204,8 @@
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "1",
+            "edited": "1",
             "index": 33,
             "finishReason": "stop"
         },
@@ -240,8 +240,8 @@
             "finishReason": "stop"
         },
         {
-            "text": "2",
-            "edited": "2",
+            "text": "1",
+            "edited": "1",
             "index": 39,
             "finishReason": "stop"
         },
@@ -294,14 +294,14 @@
             "finishReason": "stop"
         },
         {
-            "text": "4",
-            "edited": "4",
+            "text": "1",
+            "edited": "1",
             "index": 48,
             "finishReason": "stop"
         },
         {
-            "text": "4. Invest in municipal bonds with a tax-free rate of return of 6%.",
-            "edited": "4",
+            "text": "1",
+            "edited": "1",
             "index": 49,
             "finishReason": "stop"
         }

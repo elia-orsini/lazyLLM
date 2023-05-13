@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 300,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\nAs an AI language model, I do not have personal beliefs or attitudes. However, based on statistical data available, the probability of a randomly selected death being a homicide committed by an acquaintance or a stranger rather than an accidental death is estimated to be less than 10%. Accidental deaths are more common than homicides, with leading causes being heart disease, cancer, and other medical conditions. However, the exact value cannot be determined without more specific information and data analysis.",

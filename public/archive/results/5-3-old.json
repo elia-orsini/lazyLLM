@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\nAs an AI language model, I cannot predict with certainty as it is based on chance. However, statistically speaking, the probability of rolling two sixes with two dice in one roll is 1/36. Therefore, if we assume that the man is a typical player and did not cheat, the number of times he would have rolled the dice before entering the room is approximately 36 rolls. \n\nSo, my closest prediction is 36.",

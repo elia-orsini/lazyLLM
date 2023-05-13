@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\n6. I would strongly prioritize the Rwandan refugee program as it deals with a humanitarian crisis and has the potential to save lives. The employment program is important, but it can wait until the urgent needs of the refugees are met.",

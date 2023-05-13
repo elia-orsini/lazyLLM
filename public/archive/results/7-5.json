@@ -3,7 +3,7 @@
     "resultFormatLength": 4,
     "maxTokens": 200,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "\n\n2 6 8 9",

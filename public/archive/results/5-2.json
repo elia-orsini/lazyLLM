@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "Based on the given context, assuming the man did not tamper with the dice, it is highly likely that he rolled the dice only once before entering the room. Therefore, my prediction is 1.",

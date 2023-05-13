@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "Assuming fair dice, the probability of rolling two sixes with two dice in one roll is 1/36. Since the probability of rolling two sixes two times in a row is (1/36) * (1/36) = 1/1296.\nHence, the estimated number of times the man rolled the dice before entering the room would be around 1296.",

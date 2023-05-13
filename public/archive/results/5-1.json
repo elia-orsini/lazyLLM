@@ -3,7 +3,7 @@
     "resultFormatLength": 1,
     "maxTokens": 150,
     "temperature": 1,
-    "topP": 0.1,
+    "topP": 1,
     "responses": [
         {
             "text": "Based on the probability of three sixes appearing in a roll of three dice, which is (1/6)^3 or about 0.46%, and assuming the man has not tampered with the dice, my closest prediction would be that the man rolled the dice approximately 217 times before entering the room.",
