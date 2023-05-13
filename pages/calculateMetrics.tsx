@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Title from "@components/Title";
-import Footer from "@components/Footer";
 import functions from "@utils/stats";
 
 const IndexPage = () => {
@@ -112,7 +111,6 @@ const IndexPage = () => {
     calculateMedian,
     calculateMean,
     calculateStd,
-    calculateChiSquare,
     calculateCohensD,
     calculateOneWayAnova,
     calculateBestMatch,

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Client } from "@notionhq/client";
 import Item from "@components/Item";
 import extractData from "@utils/extractData";

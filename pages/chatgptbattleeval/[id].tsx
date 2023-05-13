@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { GetStaticPaths } from "next";
 import downloadJSON from "@utils/downloadJSON";
 import {
-  IPrompt,
   IMessage,
   EvalSample,
   ChatMessage,
@@ -15,7 +13,6 @@ import YAML from "js-yaml";
 import { useRouter } from "next/router";
 import PromptVisualiser from "@components/PromptVisualiser";
 import Cookies from "js-cookie";
-import PopUp from "@components/PopUp";
 import PopUpForm from "@components/PopUpForm";
 
 const Gpt3Request = () => {

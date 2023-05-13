@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Title from "@components/Title";
 import Footer from "@components/Footer";
 import TemplateMode from "@components/PromptsCreator";

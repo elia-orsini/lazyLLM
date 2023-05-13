@@ -4,7 +4,6 @@ import downloadJSON from "@utils/downloadJSON";
 import extractData from "@utils/extractData";
 import { Client } from "@notionhq/client";
 import { GetStaticPaths } from "next";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { IPrompt } from "types";
 import { useState } from "react";

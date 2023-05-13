@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-
 import YAML from "js-yaml";
-import Link from "next/link";
 import EvalItem from "@components/EvalItem";
 import Title from "@components/Title";
 import Footer from "@components/Footer";

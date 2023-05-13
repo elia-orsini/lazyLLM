@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const IndexPage = () => {
   return (
-    <>
       <div className="mx-auto w-10/12 h-screen">
         <Title />
 
@@ -38,7 +37,6 @@ const IndexPage = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 
