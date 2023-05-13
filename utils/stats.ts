@@ -1,7 +1,5 @@
-// import { normal, chiSquareTest, tTest, fTest } from "mathjs";
 import ttest2 from "@stdlib/stats-ttest2";
 import chi2test from "@stdlib/stats-chi2test";
-import anova1 from "@stdlib/stats-anova1";
 import jStat from "jstat";
 
 // indipendent t-test
@@ -11,13 +9,7 @@ function calculateIndTTest(sample1, sample2) {
   return `t=${statistic}, p=${pValue}`;
 }
 
-// // paired t-test
-// function calculatePairedTTest(sample1, sample2) {
-//   const { pValue, statistic } = ttest2(sample1, sample2);
-
-//   return [statistic, pValue];
-// }
-
+// one way anova
 function calculateOneWayAnova(groups) {
   const mean = calculateMean(groups.flat());
 
