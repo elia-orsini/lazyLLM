@@ -26,14 +26,6 @@ export default function Item({ content, fullData }) {
 
           <span className="uppercase"> - {content.variants} versions </span>
         </div>
-
-        {/* <hr className="border-black my-0" /> */}
-
-        {/* <div className="py-1 font-normal h-6 overflow-hidden">
-          {filteredItems.length !== content.variants && <span className="font-bold">MISSING VARIANTS!</span>}
-          {allVariantsTested ? <span> TESTED </span> : <span> NOT TESTED YET </span>}
-          {discussionPresent && <span>- DISCUSSED </span>}
-        </div> */}
       </div>
     </a>
   );
