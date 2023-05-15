@@ -59,9 +59,8 @@ const Landing = () => {
               </h1>
               <p className="mt-4 font-semibold text-sm  sm:text-base">
                 Create and edit prompts. <br />
-                Organise or edit them. <br />
-                Download them in any format. <br />
-                Test them on any LLM. <br />
+                Download them. <br />
+                Test them. <br />
                 <br />
                 All in one place.
               </p>
