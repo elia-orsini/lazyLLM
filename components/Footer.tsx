@@ -11,10 +11,13 @@ export default function Footer({}) {
           <p className="text-xs tracking-wide">
             images from OpenAI&apos;s DALL-E
           </p>
-        </div>
-
-        <div className="text-right">
-          <p className="font-semibold text-sm  tracking-wide">contact</p>
+          <p className="text-xs tracking-wide mt-4">
+            created by{" "}
+            <a className="underline" href="https://elia-orsini.com">
+              elia
+            </a>{" "}
+            with {`<3`}
+          </p>
         </div>
       </div>
     </div>
