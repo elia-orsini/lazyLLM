@@ -7,8 +7,14 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <Head>
         <title>lazyLLM</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="Description" content="lazyLLM - tooling for prompt testing on language models" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta
+          name="Description"
+          content="lazyLLM - A set of tools for testing prompts on large language models (LLMs)."
+        />
         <link rel="icon" href="/lazyLLMlogo.png" />
       </Head>
 

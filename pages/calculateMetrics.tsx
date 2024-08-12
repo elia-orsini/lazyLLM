@@ -127,7 +127,7 @@ const IndexPage = () => {
               <span className="">import dataset</span>
             </p>
             <input
-              className="mx-auto mt-1 border p-2 border-black bg-secondary"
+              className="mx-auto mt-1 w-full border p-2 border-black bg-secondary"
               id="files"
               type="file"
               accept=".json"

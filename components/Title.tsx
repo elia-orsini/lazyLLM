@@ -21,7 +21,7 @@ export default function Title({ links = [], includeDefaultLinks = true }) {
               </button>
             </Link>
             <Link href="/chatgptbattleeval" passHref>
-              <button className="uppercase text-sm mt-2 mx-1 my-auto font-semibold hover:bg-gray-200 px-1">
+              <button className="pointer-events-none line-through uppercase text-sm mt-2 mx-1 my-auto font-semibold hover:bg-gray-200 px-1">
                 testing
               </button>
             </Link>
