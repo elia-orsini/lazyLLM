@@ -5,6 +5,7 @@ import extractData from "@utils/extractData";
 import Title from "@components/Title";
 import { IPrompt } from "types";
 import Footer from "@components/Footer";
+import Header from "@components/Header";
 
 const IndexPage = ({ items, cognitiveBiases }) => {
   const [biasSelected, setBias] = useState("");
@@ -34,11 +35,16 @@ const IndexPage = ({ items, cognitiveBiases }) => {
   return (
     <>
       <div className="mx-auto w-10/12">
+        <Header title="Cognitive Biases Prompts - lazyLLM" />
+
         <Title />
 
         <div className="mx-auto py-2 mt-2 grid grid-cols-2">
           <div>
-            <select className="border px-1 h-full border-black hover:bg-gray-200" onChange={(v) => setBias(v.target.value)}>
+            <select
+              className="border px-1 h-full border-black hover:bg-gray-200"
+              onChange={(v) => setBias(v.target.value)}
+            >
               <option value="">all biases</option>
               {cognitiveBiases.map((bias: string) => {
                 return (

@@ -3,6 +3,7 @@ import YAML from "js-yaml";
 import EvalItem from "@components/EvalItem";
 import Title from "@components/Title";
 import Footer from "@components/Footer";
+import Header from "@components/Header";
 
 const EvalsList = () => {
   const yamlFilePath = "/evals/aba-mrpc-true-false.yaml";
@@ -31,6 +32,8 @@ const EvalsList = () => {
 
   return (
     <div className="w-10/12 mx-auto h-screen">
+      <Header title="OpenAI's Evals - lazyLLM" />
+
       <Title />
 
       <div className="flex flex-col h-3/6">

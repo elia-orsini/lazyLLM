@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Title from "@components/Title";
 import functions from "@utils/stats";
+import Header from "@components/Header";
 
 const IndexPage = () => {
   const [responses, setResponses] = useState<string[]>([]);
@@ -119,6 +120,8 @@ const IndexPage = () => {
   return (
     <>
       <div className="mx-auto w-10/12 h-screen">
+        <Header title="Analysis - lazyLLM" />
+
         <Title />
 
         <div className="flex w-full grid grid-col col-1 bg-blac">
