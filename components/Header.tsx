@@ -3,7 +3,7 @@ import React from "react";
 
 function Header({
   title = "lazyLLM",
-  description = "lazyLLM - A set of tools for testing prompts on large language models (LLMs).",
+  description = "lazyLLM is a set of tools for creating prompts, testing them on Large Language Models (LLMs) and analyze their results. lazyLLM contains a large dataset of prompts for cognitive biases and, additionally, it stores the OpenAI evals set of prompts.",
   img = "/dalle7.png",
 }) {
   return (
@@ -12,7 +12,7 @@ function Header({
       <meta name="title" content={title} />
       <meta property="og:title" content={title} />
 
-      <meta name="description" content={description} key="desc" />
+      <meta name="description" content={description} />
       <meta property="og:description" content={description} />
 
       <meta property="og:image" content={img} />
