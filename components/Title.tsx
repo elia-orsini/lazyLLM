@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Title({ links = [], includeDefaultLinks = true }) {
@@ -7,7 +8,11 @@ export default function Title({ links = [], includeDefaultLinks = true }) {
         <div className="text-left">
           <Link href="/" passHref>
             <h1 className="inline font-semibold text-xl tracking-wide font-black cursor-pointer">
-              <img src="/lazyLLMlogo.png" className="w-6 inline mr-1 pb-1.5" />
+              <Image
+                src="/lazyLLMlogo.png"
+                alt="lazyLLM logo"
+                className="w-6 inline mr-1 pb-1.5"
+              />
               lazyLLM
             </h1>
           </Link>
