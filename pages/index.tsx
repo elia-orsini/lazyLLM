@@ -1,5 +1,4 @@
 import Footer from "@components/Footer";
-import Image from "next/image";
 import Link from "next/link";
 
 const Landing = () => {
@@ -8,7 +7,7 @@ const Landing = () => {
       <div className="h-screen flex flex-col items-start">
         <div className="fixed bg-white w-full grid grid-cols-2 flex items-center px-8 py-4 border-b border-black z-10">
           <h2 className="font-black text-xl">
-            <Image
+            <img
               src="/lazyLLMlogo.png"
               alt="lazyLLM logo"
               className="w-6 inline mr-1 pb-1.5"
@@ -37,7 +36,7 @@ const Landing = () => {
         </div>
 
         <div className="grid sm:grid-cols-3 w-full">
-          <Image
+          <img
             className="w-60 ml-25 hidden sm:block"
             alt="lazyLLm character 2"
             src="lazy2.svg"
@@ -58,7 +57,7 @@ const Landing = () => {
       <div className="flex h-screen bg-secondary border-t-2 border-b-2 border-black ">
         <div className="w-full my-auto my-auto">
           <div className="sm:flex sm:w-max mx-auto">
-            <Image
+            <img
               src="lazy3.svg"
               alt="lazyLLm character 3"
               className="w-40 sm:w-52 sm:mr-20 mx-auto pl-10 sm:ml-0 pr-4 sm:pl-0"
@@ -87,7 +86,7 @@ const Landing = () => {
                 Re-use prompts.
               </p>
             </div>
-            <Image
+            <img
               src="lazy4.svg"
               alt="lazyLLm character 4"
               className="w-40 mt-4 sm:mt-0 sm:w-80 mx-auto sm:ml-0"
@@ -98,19 +97,19 @@ const Landing = () => {
 
       <div className="flex bg-white h-screen border-b-2 border-black">
         <div className="mx-auto my-auto grid sm:grid-cols-2 pt-10 sm:py-0 w-3/4">
-          <Image
+          <img
             src="table.svg"
             alt="summary table of features"
             width={400}
             className="col-span-1 mx-auto my-auto"
           />
           <div className="grid grid-rows-2">
-            <Image
+            <img
               src="table2.svg"
               alt="summary table of features 2"
               className="mx-auto my-auto w-60 sm:block hidden"
             />
-            <Image
+            <img
               src="lazy5.svg"
               alt="lazyLLm character 5"
               className="mx-auto my-auto w-44 pt-10 sm:pt-0"
