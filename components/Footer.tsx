@@ -6,7 +6,7 @@ export default function Footer({}) {
       <div className="w-full grid grid-cols-2">
         <div className="text-left">
           <p className="inline font-semibold text-sm lowercase tracking-wide">
-            lazyLLM © 2023
+            lazyLLM © 2024
           </p>
           <p className="text-xs tracking-wide">
             images from OpenAI&apos;s DALL-E
